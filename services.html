@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | BULADEV Building & Land Development</title>
+    <meta name="description" content="Residential construction, commercial construction, land development, and professional project management services backed by 20 years of experience.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/services.css">
+</head>
+<body>
+
+<!-- ─── Progress Sidebar ─── -->
+<nav class="progress-sidebar" aria-label="Page sections">
+    <div class="progress-dot" data-target="residential-construction" data-label="Residential"></div>
+    <div class="progress-dot" data-target="commercial-construction"  data-label="Commercial"></div>
+    <div class="progress-dot" data-target="land-development"         data-label="Land Development"></div>
+    <div class="progress-dot" data-target="project-management"       data-label="Project Management"></div>
+</nav>
+
+<!-- ─── Top Bar ─── -->
+<div class="top-bar">
+    <div class="container top-bar-content">
+        <div class="top-contact">
+            <a href="tel:3134449734"><i class="fas fa-phone-alt"></i> (313) 444-9734</a>
+            <a href="mailto:bula@buladev.com"><i class="fas fa-envelope"></i> bula@buladev.com</a>
+        </div>
+        <div class="trust-marquee">
+            <div class="trust-track">
+                <span><i class="fas fa-star"></i> 20 YEARS EXPERIENCE</span>
+                <span><i class="fas fa-shield-alt"></i> LICENSED &amp; INSURED</span>
+                <span><i class="fas fa-chart-line"></i> LEAN SIX SIGMA CERTIFIED</span>
+                <span><i class="fas fa-tasks"></i> PROFESSIONAL PROJECT MANAGEMENT</span>
+                <span><i class="fas fa-star"></i> 20 YEARS EXPERIENCE</span>
+                <span><i class="fas fa-shield-alt"></i> LICENSED &amp; INSURED</span>
+                <span><i class="fas fa-chart-line"></i> LEAN SIX SIGMA CERTIFIED</span>
+                <span><i class="fas fa-tasks"></i> PROFESSIONAL PROJECT MANAGEMENT</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ─── Navbar ─── -->
+<header class="navbar" id="navbar">
+    <div class="container nav-container">
+        <div class="logo-group">
+            <a href="index.html"><img src="img/header logo.png" alt="BULADEV Logo"></a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <div class="dropdown">
+                <a href="services.html" class="dropdown-toggle active">
+                    Services <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="residential-construction.html"><i class="fas fa-home"></i> Residential Construction</a>
+                    <a href="commercial.html"><i class="fas fa-building"></i> Commercial Construction</a>
+                    <a href="land-development.html"><i class="fas fa-map-marked-alt"></i> Land Development</a>
+                    <a href="project-management.html"><i class="fas fa-tasks"></i> Project Management</a>
+                </div>
+            </div>
+            <a href="portfolio.html">Projects</a>
+            <a href="process.html">Our Process</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <a href="contact.html" class="btn btn-primary nav-cta">
+            Start Your Project <span class="btn-arrow"><i class="fas fa-arrow-right"></i></span>
+        </a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+<div class="mobile-menu" id="mobile-menu">
+    <button class="close-menu-btn" id="close-menu-btn" aria-label="Close menu"><i class="fas fa-times"></i></button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html" class="active">Services</a>
+    <div class="mobile-submenu">
+        <a href="residential-construction.html">Residential Construction</a>
+        <a href="commercial.html">Commercial Construction</a>
+        <a href="land-development.html">Land Development</a>
+        <a href="project-management.html">Project Management</a>
+    </div>
+    <a href="portfolio.html">Projects</a>
+    <a href="process.html">Our Process</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+</div>
+
+<main>
+
+<!-- ─── Hero ─── -->
+<section class="services-hero">
+    <img src="img/service-hero.png" alt="BULADEV construction and residential services" class="services-hero-img">
+    <div class="services-hero-overlay"></div>
+    <div class="services-hero-content container">
+        <span class="services-hero-eyebrow"><i class="fas fa-hard-hat"></i>&nbsp; Our Services</span>
+        <h1>Residential, Commercial &amp; <span>Land Development</span> Services</h1>
+        <hr class="services-hero-rule">
+        <p>Construction solutions backed by 20 years of experience, licensed and insured service, Lean Six Sigma thinking, and professional project management</p>
+        <div class="services-hero-badges">
+            <a href="#residential-construction" class="hero-badge"><i class="fas fa-home"></i> Residential</a>
+            <a href="#commercial-construction"  class="hero-badge"><i class="fas fa-building"></i> Commercial</a>
+            <a href="#land-development"         class="hero-badge"><i class="fas fa-map-marked-alt"></i> Land Development</a>
+            <a href="#project-management"       class="hero-badge"><i class="fas fa-tasks"></i> Project Management</a>
+        </div>
+    </div>
+</section>
+
+<!-- ─── Breadcrumb ─── -->
+<div class="breadcrumb-bar">
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="sep"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Services</span>
+        </nav>
+    </div>
+</div>
+
+<!-- ─── Intro ─── -->
+<div class="services-intro">
+    <div class="container">
+        <div class="reveal">
+            <span class="section-tag">What We Do</span>
+            <h2>Full-Service Construction &amp; Development for Every Type of Project</h2>
+            <p>BULADEV Building &amp; Land Development and ASA Construction LLC provide a wide range of construction and development services designed to help clients improve, build, and maximize the value of their properties. Whether you need a residential build, commercial renovation, tenant improvement, property upgrade, or land development support, our team can help plan, coordinate, and deliver the work.</p>
+        </div>
+        <nav class="service-nav reveal">
+            <a href="#residential-construction"><i class="fas fa-home"></i><span>Residential</span></a>
+            <a href="#commercial-construction"><i class="fas fa-building"></i><span>Commercial</span></a>
+            <a href="#land-development"><i class="fas fa-map-marked-alt"></i><span>Land Development</span></a>
+            <a href="#project-management"><i class="fas fa-tasks"></i><span>Project Management</span></a>
+        </nav>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SERVICE BLOCK 1 — RESIDENTIAL
+     ═══════════════════════════════════════════ -->
+<section class="service-block" id="residential-construction">
+    <div class="container">
+        <div class="service-block-inner">
+
+            <div class="service-visual reveal reveal-left">
+                <div class="service-img-wrap">
+                    <img src="img/residential-construction.png" alt="Residential construction">
+                    <div class="service-img-badge"><i class="fas fa-home"></i> Residential Construction</div>
+                </div>
+                <div class="service-accent-bar">
+                    <div class="accent-stat">
+                        <i class="fas fa-award"></i>
+                        <div class="accent-stat-text">
+                            <strong>20+ Years</strong>
+                            <span>Residential project experience</span>
+                        </div>
+                    </div>
+                    <div class="accent-stat">
+                        <i class="fas fa-shield-alt"></i>
+                        <div class="accent-stat-text">
+                            <strong>Licensed &amp; Insured</strong>
+                            <span>Full coverage on every job</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-content reveal reveal-right">
+                <div class="service-number">01</div>
+                <span class="section-tag">Residential Construction</span>
+                <h2>Built for <span>Comfort, Function,</span> and Lasting Value</h2>
+                <p>Your home or residential property deserves careful planning and quality construction. We help homeowners, investors, and property owners complete projects that improve comfort, function, appearance, and long-term value.</p>
+                <ul class="service-list">
+                    <li><i class="fas fa-check-circle"></i> New residential construction</li>
+                    <li><i class="fas fa-check-circle"></i> Home additions</li>
+                    <li><i class="fas fa-check-circle"></i> Kitchen renovations</li>
+                    <li><i class="fas fa-check-circle"></i> Bathroom renovations</li>
+                    <li><i class="fas fa-check-circle"></i> Basement finishing</li>
+                    <li><i class="fas fa-check-circle"></i> Interior remodeling</li>
+                    <li><i class="fas fa-check-circle"></i> Exterior remodeling</li>
+                    <li><i class="fas fa-check-circle"></i> Roofing coordination</li>
+                    <li><i class="fas fa-check-circle"></i> Siding &amp; exterior upgrades</li>
+                    <li><i class="fas fa-check-circle"></i> Flooring installation</li>
+                    <li><i class="fas fa-check-circle"></i> Drywall and painting</li>
+                    <li><i class="fas fa-check-circle"></i> Decks &amp; outdoor living</li>
+                    <li><i class="fas fa-check-circle"></i> Garage construction</li>
+                    <li><i class="fas fa-check-circle"></i> Multi-family upgrades</li>
+                    <li><i class="fas fa-check-circle"></i> Investment property renovations</li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary">
+                    Schedule a Residential Consultation <span class="btn-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SERVICE BLOCK 2 — COMMERCIAL
+     ═══════════════════════════════════════════ -->
+<section class="service-block" id="commercial-construction">
+    <div class="container">
+        <div class="service-block-inner">
+
+            <div class="service-visual reveal reveal-right">
+                <div class="service-img-wrap">
+                    <img src="img/commercial.png" alt="Commercial construction">
+                    <div class="service-img-badge"><i class="fas fa-building"></i> Commercial Construction</div>
+                </div>
+                <div class="service-accent-bar">
+                    <div class="accent-stat">
+                        <i class="fas fa-hard-hat"></i>
+                        <div class="accent-stat-text">
+                            <strong>Professional Execution</strong>
+                            <span>Quality coordination on every project</span>
+                        </div>
+                    </div>
+                    <div class="accent-stat">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="accent-stat-text">
+                            <strong>Lean Six Sigma</strong>
+                            <span>Efficient, waste-reduced delivery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-content reveal reveal-left">
+                <div class="service-number">02</div>
+                <span class="section-tag">Commercial Construction</span>
+                <h2>Spaces That <span>Work for Your Business</span></h2>
+                <p>A commercial space should be functional, professional, and built to support business operations. We work with commercial clients to improve, renovate, and build spaces that serve employees, customers, tenants, and property owners.</p>
+                <ul class="service-list">
+                    <li><i class="fas fa-check-circle"></i> Commercial renovations</li>
+                    <li><i class="fas fa-check-circle"></i> Tenant build-outs</li>
+                    <li><i class="fas fa-check-circle"></i> Office improvements</li>
+                    <li><i class="fas fa-check-circle"></i> Retail space improvements</li>
+                    <li><i class="fas fa-check-circle"></i> Restaurant improvements</li>
+                    <li><i class="fas fa-check-circle"></i> Interior construction</li>
+                    <li><i class="fas fa-check-circle"></i> Exterior upgrades</li>
+                    <li><i class="fas fa-check-circle"></i> Commercial property repairs</li>
+                    <li><i class="fas fa-check-circle"></i> Facility improvements</li>
+                    <li><i class="fas fa-check-circle"></i> Flooring, walls &amp; ceilings</li>
+                    <li><i class="fas fa-check-circle"></i> Project coordination</li>
+                    <li><i class="fas fa-check-circle"></i> Site improvement support</li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary">
+                    Start a Commercial Project <span class="btn-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SERVICE BLOCK 3 — LAND DEVELOPMENT
+     ═══════════════════════════════════════════ -->
+<section class="service-block" id="land-development">
+    <div class="container">
+        <div class="service-block-inner">
+
+            <div class="service-visual reveal reveal-left">
+                <div class="service-img-wrap">
+                    <img src="img/land-development.png" alt="Land development">
+                    <div class="service-img-badge"><i class="fas fa-map-marked-alt"></i> Land Development</div>
+                </div>
+                <div class="service-accent-bar">
+                    <div class="accent-stat">
+                        <i class="fas fa-drafting-compass"></i>
+                        <div class="accent-stat-text">
+                            <strong>Development Planning</strong>
+                            <span>Strategic site &amp; property consulting</span>
+                        </div>
+                    </div>
+                    <div class="accent-stat">
+                        <i class="fas fa-users"></i>
+                        <div class="accent-stat-text">
+                            <strong>Project Managers</strong>
+                            <span>From planning to construction-ready</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-content reveal reveal-right">
+                <div class="service-number">03</div>
+                <span class="section-tag">Land Development</span>
+                <h2>Turning Property <span>Potential Into Opportunity</span></h2>
+                <p>Land development requires vision, organization, and practical planning. BULADEV helps clients evaluate and improve land or property for future use, construction, sale, or investment.</p>
+                <ul class="service-list">
+                    <li><i class="fas fa-check-circle"></i> Development planning support</li>
+                    <li><i class="fas fa-check-circle"></i> Site preparation coordination</li>
+                    <li><i class="fas fa-check-circle"></i> Land improvement strategy</li>
+                    <li><i class="fas fa-check-circle"></i> Property use planning</li>
+                    <li><i class="fas fa-check-circle"></i> Pre-construction coordination</li>
+                    <li><i class="fas fa-check-circle"></i> Construction-readiness support</li>
+                    <li><i class="fas fa-check-circle"></i> Grading &amp; site work coordination</li>
+                    <li><i class="fas fa-check-circle"></i> Utility coordination support</li>
+                    <li><i class="fas fa-check-circle"></i> Driveway &amp; access planning</li>
+                    <li><i class="fas fa-check-circle"></i> Lot improvement projects</li>
+                    <li><i class="fas fa-check-circle"></i> Development project consulting</li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary">
+                    Discuss Your Land Development Goals <span class="btn-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SERVICE BLOCK 4 — PROJECT MANAGEMENT
+     ═══════════════════════════════════════════ -->
+<section class="service-block" id="project-management">
+    <div class="container">
+        <div class="service-block-inner">
+
+            <div class="service-visual reveal reveal-right">
+                <div class="service-img-wrap">
+                    <img src="img/project.png" alt="Project management">
+                    <div class="service-img-badge"><i class="fas fa-tasks"></i> Project Management</div>
+                </div>
+                <div class="service-accent-bar">
+                    <div class="accent-stat">
+                        <i class="fas fa-calendar-check"></i>
+                        <div class="accent-stat-text">
+                            <strong>Schedule Control</strong>
+                            <span>On-time coordination &amp; milestones</span>
+                        </div>
+                    </div>
+                    <div class="accent-stat">
+                        <i class="fas fa-comments"></i>
+                        <div class="accent-stat-text">
+                            <strong>Client Communication</strong>
+                            <span>Transparent updates at every phase</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-content reveal reveal-left">
+                <div class="service-number">04</div>
+                <span class="section-tag">Project Management</span>
+                <h2>Structure, Communication &amp; <span>Accountability</span> at Every Phase</h2>
+                <p>Construction projects involve many moving parts. Our professional project managers help bring structure, communication, and accountability to each phase of the work — from scope development through final completion walkthrough.</p>
+                <ul class="service-list">
+                    <li><i class="fas fa-check-circle"></i> Project scope review</li>
+                    <li><i class="fas fa-check-circle"></i> Schedule planning &amp; coordination</li>
+                    <li><i class="fas fa-check-circle"></i> Budget tracking support</li>
+                    <li><i class="fas fa-check-circle"></i> Material &amp; labor coordination</li>
+                    <li><i class="fas fa-check-circle"></i> Trade coordination</li>
+                    <li><i class="fas fa-check-circle"></i> Progress updates</li>
+                    <li><i class="fas fa-check-circle"></i> Quality control checkpoints</li>
+                    <li><i class="fas fa-check-circle"></i> Final completion walkthroughs</li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary">
+                    Learn About Our PM Approach <span class="btn-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ─── Credential Strip ─── -->
+<div class="cred-strip">
+    <div class="container">
+        <div class="cred-strip-grid">
+            <div class="cred-strip-item reveal">
+                <i class="fa-solid fa-calendar-check"></i>
+                <h4>20 Years of Experience</h4>
+                <p>Supporting construction, development, and property improvement projects.</p>
+            </div>
+            <div class="cred-strip-item reveal">
+                <i class="fa-solid fa-shield"></i>
+                <h4>Licensed &amp; Insured</h4>
+                <p>For professionalism, accountability, and client confidence on every job.</p>
+            </div>
+            <div class="cred-strip-item reveal">
+                <i class="fa-solid fa-gear"></i>
+                <h4>Lean Six Sigma Certified</h4>
+                <p>Process improvement, waste reduction, and efficient project delivery.</p>
+            </div>
+            <div class="cred-strip-item reveal">
+                <i class="fa-solid fa-user-group"></i>
+                <h4>Professional Project Managers</h4>
+                <p>Focused on scope, schedule, budget, communication, and quality control.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ─── CTA ─── -->
+<section class="cta-section">
+    <div class="container">
+        <h2 class="cta-title reveal">Ready to Build Something Successful?</h2>
+        <p class="cta-desc reveal">Whether you are planning a residential project, commercial improvement, land development opportunity, or full construction project, BULADEV and ASA Construction LLC are ready to help you move forward with confidence.</p>
+        <div class="cta-buttons reveal">
+            <a href="tel:3134449734" class="btn btn-white"><i class="fas fa-phone-alt"></i> (313) 444-9734</a>
+            <a href="contact.html" class="btn btn-outline-white">Request a Consultation</a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                   <div class="logo-group">
+                <img href="#home" src="img/footer logo.png" alt="BULADEV Logo">
+            </div>
+                    <p class="footer-desc">BULADEV Building & Land Development, together with ASA Construction LLC, provides licensed and insured residential construction, commercial construction, renovation, build-out, project management, and land development support. Backed by 20 years of experience, certified Lean Six Sigma practices, and professional project managers, we help homeowners, investors, businesses, and property owners plan and complete successful construction projects.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                       <li><a href="#home">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li class="dropdown">
+        <a href="services.html">Services</a>
+
+        <ul class="submenu">
+            <li><a href="residential-construction.html"><i class="fas fa-home"></i> Residential Construction</a></li>
+            <li><a href="commercial.html"><i class="fas fa-building"></i> Commercial Construction</a></li>
+            <li><a href="land-development.html"><i class="fas fa-map-marked-alt"></i> Land Development</a></li>
+            <li><a href="project-management.html"><i class="fas fa-tasks"></i> Project Management</a></li>
+        </ul>
+        
+    </li>
+                        <li><a href="portfolio.html">Projects</a></li>
+                         <li><a href="#faq">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="residential-construction.html">Residential Construction</a></li>
+                        <li><a href="commercial.html">Commercial Construction</a></li>
+                        <li><a href="land-development.html">Renovations</a></li>
+                        <li><a href="project-management.html">Tenant Build-Outs</a></li>
+                        <li><a href="residential-construction.html">Property Improvements</a></li>
+                        <li><a href="land-development.html">Land Development</a></li>
+                        <li><a href="contact.html">Site Preparation Support</a></li>
+                        <li><a href="project-management.html">Project Management</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="contact-list">
+
+                    <a href="tel:3134449734"><i class="fas fa-phone-alt"></i> (313) 444-9734</a>
+                    <a href="mailto:bula@buladev.com"><i class="fas fa-envelope"></i> bula@buladev.com</a>
+                    <a href="www.BULADEV.com"><li><i class="fas fa-globe"></i> www.BULADEV.com</li></a>
+                    <li><i class="fa-solid fa-location-dot"></i> Contact Us for Service Availability in Your Area</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> BULADEV Building & Land Development and ASA Construction LLC. All rights reserved.</p>
+                <p>Licensed & Insured | 20 Years Experience</p>
+            </div>
+        </div>
+    </footer>
+
+<script>
+/* ── Mobile menu ── */
+(function(){
+    const btn=document.getElementById('mobile-menu-btn');
+    const menu=document.getElementById('mobile-menu');
+    const overlay=document.getElementById('mobile-menu-overlay');
+    const close=document.getElementById('close-menu-btn');
+    function openMenu(){menu.classList.add('active');overlay.classList.add('active');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden'}
+    function closeMenu(){menu.classList.remove('active');overlay.classList.remove('active');btn.setAttribute('aria-expanded','false');document.body.style.overflow=''}
+    if(btn) btn.addEventListener('click',openMenu);
+    if(close) close.addEventListener('click',closeMenu);
+    if(overlay) overlay.addEventListener('click',closeMenu);
+    document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',closeMenu));
+})();
+
+/* ── Navbar shadow ── */
+(function(){
+    const nb=document.getElementById('navbar');
+    if(!nb)return;
+    window.addEventListener('scroll',()=>{
+        nb.style.boxShadow=window.scrollY>10?'0 4px 24px rgba(0,0,0,.12)':'0 1px 2px rgba(0,0,0,.05)';
+    },{passive:true});
+})();
+
+/* ── Scroll reveal — stagger list items within each block ── */
+(function(){
+    // Mark everything that needs to reveal
+    const targets=[
+        {sel:'.service-visual',    cls:'reveal reveal-left'},
+        {sel:'.service-content',   cls:'reveal reveal-right'},
+        {sel:'.cred-strip-item',   cls:'reveal reveal-scale', stagger:true},
+        {sel:'.cta-title',         cls:'reveal reveal-blur'},
+        {sel:'.cta-desc',          cls:'reveal'},
+        {sel:'.cta-buttons',       cls:'reveal'},
+        {sel:'.services-intro .reveal', cls:'reveal'},
+    ];
+
+    targets.forEach(({sel,cls,stagger})=>{
+        document.querySelectorAll(sel).forEach((el,i)=>{
+            if(el.dataset.revealed)return;
+            el.dataset.revealed='1';
+            cls.split(' ').forEach(c=>c&&el.classList.add(c));
+            if(stagger) el.style.transitionDelay=(i*100)+'ms';
+        });
+    });
+
+    // Stagger list items per block
+    document.querySelectorAll('.service-list').forEach(list=>{
+        list.querySelectorAll('li').forEach((li,i)=>{
+            li.style.opacity='0';
+            li.style.transform='translateX(-12px)';
+            li.style.transition=`opacity 0.4s ${200+i*45}ms ease, transform 0.4s ${200+i*45}ms ease`;
+            li.dataset.listItem='1';
+        });
+    });
+
+    const io=new IntersectionObserver(entries=>{
+        entries.forEach(e=>{
+            if(!e.isIntersecting)return;
+            e.target.classList.add('visible');
+            // Animate list items when their parent block becomes visible
+            if(e.target.classList.contains('service-content')||e.target.classList.contains('service-visual')){
+                const block=e.target.closest('.service-block');
+                if(block){
+                    block.querySelectorAll('.service-list li').forEach(li=>{
+                        li.style.opacity='1';
+                        li.style.transform='translateX(0)';
+                    });
+                }
+            }
+            io.unobserve(e.target);
+        });
+    },{threshold:0.1});
+
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+})();
+
+/* ── Progress sidebar dots ── */
+(function(){
+    const dots=document.querySelectorAll('.progress-dot');
+    const sectionIds=['residential-construction','commercial-construction','land-development','project-management'];
+
+    dots.forEach(dot=>{
+        dot.addEventListener('click',()=>{
+            const target=document.getElementById(dot.dataset.target);
+            if(target) target.scrollIntoView({behavior:'smooth'});
+        });
+    });
+
+    const io=new IntersectionObserver(entries=>{
+        entries.forEach(e=>{
+            if(e.isIntersecting){
+                const id=e.target.id;
+                dots.forEach(d=>{
+                    d.classList.toggle('active',d.dataset.target===id);
+                });
+            }
+        });
+    },{threshold:0.4});
+
+    sectionIds.forEach(id=>{
+        const el=document.getElementById(id);
+        if(el)io.observe(el);
+    });
+})();
+
+/* ── Footer year ── */
+(function(){
+    const el=document.getElementById('current-year');
+    if(el) el.textContent=new Date().getFullYear();
+})();
+</script>
+
+</body>
+</html>

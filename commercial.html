@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Construction | BULADEV Building & Land Development</title>
+    <meta name="description" content="Licensed and insured commercial construction, renovations, tenant improvements, and build-outs backed by 20 years of experience.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ── Commercial Hero ── */
+        .commercial-hero {
+            position: relative;
+            width: 100%;
+            min-height: 580px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow: hidden;
+        }
+
+        .commercial-hero-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        /* dark gradient over hero photo */
+        .commercial-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(10, 18, 35, 0.45) 0%,
+                rgba(10, 18, 35, 0.72) 60%,
+                rgba(10, 18, 35, 0.90) 100%
+            );
+            z-index: 1;
+        }
+
+        .commercial-hero-body {
+            position: relative;
+            z-index: 2;
+            padding: 0 50px 56px;
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            animation: heroFadeUp 0.85s ease both;
+        }
+
+        @keyframes heroFadeUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .commercial-hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-orange);
+            color: #fff;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+
+        .commercial-hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.1;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            max-width: 820px;
+            margin-bottom: 18px;
+            letter-spacing: -1px;
+        }
+
+        .commercial-hero h1 span {
+            color: var(--primary-orange);
+        }
+
+        .commercial-hero-sub {
+            color: rgba(255,255,255,0.88);
+            font-size: 1.15rem;
+            line-height: 1.55;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+            max-width: 680px;
+            margin-bottom: 32px;
+        }
+
+        .commercial-hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        /* ── Breadcrumb strip ── */
+        .breadcrumb-bar {
+            background: #0F172A;
+            padding: 11px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .breadcrumb-bar .container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.82rem;
+            color: #94A3B8;
+        }
+
+        .breadcrumb-bar a {
+            color: #94A3B8;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb-bar a:hover { color: var(--primary-orange); }
+
+        .breadcrumb-bar i {
+            font-size: 0.6rem;
+            color: #475569;
+        }
+
+        .breadcrumb-bar span { color: var(--primary-orange); font-weight: 600; }
+
+        /* ── Intro Section ── */
+        .comm-intro {
+            padding: 80px 0 64px;
+            background: #fff;
+        }
+
+        .comm-intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 72px;
+            align-items: center;
+        }
+
+        .comm-intro-text .section-tag {
+            display: block;
+            margin-bottom: 14px;
+        }
+
+        .comm-intro-text h2 {
+            font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .comm-intro-text p {
+            color: var(--text-gray);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .comm-intro-text p:last-of-type { margin-bottom: 32px; }
+
+        /* Stats strip inside intro */
+        .comm-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--border-color);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .comm-stat {
+            background: #fff;
+            padding: 28px 20px;
+            text-align: center;
+            transition: background 0.25s;
+        }
+
+        .comm-stat:hover { background: #FFF7ED; }
+
+        .comm-stat-num {
+            font-size: 2.4rem;
+            font-weight: 900;
+            color: var(--primary-orange);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .comm-stat-label {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        /* Side visual */
+        .comm-intro-visual {
+            position: relative;
+        }
+
+        .comm-intro-visual img {
+            width: 100%;
+            border-radius: 16px;
+            display: block;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.13);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .comm-intro-visual:hover img {
+            transform: scale(1.02);
+            box-shadow: 0 28px 60px rgba(0,0,0,0.18);
+        }
+
+        /* Badge overlay */
+        .comm-intro-badge {
+            position: absolute;
+            bottom: -22px;
+            left: -22px;
+            background: var(--primary-orange);
+            color: #fff;
+            border-radius: 12px;
+            padding: 18px 22px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 8px 28px rgba(249,115,22,0.4);
+        }
+
+        .comm-intro-badge i {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .comm-intro-badge-text strong {
+            display: block;
+            font-size: 1.4rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .comm-intro-badge-text span {
+            font-size: 0.8rem;
+            opacity: 0.88;
+            font-weight: 500;
+        }
+
+        /* ── Services Grid Section ── */
+        .comm-services {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+
+        .comm-services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-top: 56px;
+        }
+
+        .comm-service-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .comm-service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 44px rgba(0,0,0,0.12);
+            border-color: rgba(249,115,22,0.3);
+        }
+
+        .comm-service-card-top {
+            height: 6px;
+            background: var(--primary-orange);
+            transition: height 0.3s ease;
+        }
+
+        .comm-service-card:hover .comm-service-card-top {
+            height: 10px;
+        }
+
+        .comm-service-card-body {
+            padding: 30px 28px 32px;
+        }
+
+        .comm-service-icon {
+            width: 52px;
+            height: 52px;
+            background: #FFF7ED;
+            border: 2px solid rgba(249,115,22,0.2);
+            color: var(--primary-orange);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 18px;
+            transition: background 0.3s, transform 0.35s ease;
+        }
+
+        .comm-service-card:hover .comm-service-icon {
+            background: var(--primary-orange);
+            color: #fff;
+            transform: rotate(-6deg) scale(1.1);
+        }
+
+        .comm-service-card-body h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .comm-service-card-body p {
+            color: var(--text-gray);
+            font-size: 0.92rem;
+            line-height: 1.65;
+            margin-bottom: 18px;
+        }
+
+        .comm-service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--primary-orange);
+            transition: gap 0.2s;
+        }
+
+        .comm-service-link:hover { gap: 10px; }
+
+        /* ── Why BULADEV for Commercial ── */
+        .comm-why {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .comm-why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+            margin-top: 56px;
+        }
+
+        .comm-why-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .comm-why-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 18px 16px;
+            border-radius: 10px;
+            transition: background 0.25s, transform 0.25s;
+        }
+
+        .comm-why-item:hover {
+            background: #FFF7ED;
+            transform: translateX(6px);
+        }
+
+        .comm-why-item-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: var(--primary-orange);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .comm-why-item:hover .comm-why-item-icon {
+            transform: scale(1.15) rotate(-5deg);
+        }
+
+        .comm-why-item-text h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+
+        .comm-why-item-text p {
+            font-size: 0.88rem;
+            color: var(--text-gray);
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        /* Right visual panel */
+        .comm-why-panel {
+            background: #0F172A;
+            border-radius: 16px;
+            padding: 48px 40px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .comm-why-panel h3 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 4px;
+        }
+
+        .comm-why-panel > p {
+            color: #94A3B8;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .comm-panel-divider {
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .comm-cred-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .comm-cred {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #E2E8F0;
+        }
+
+        .comm-cred i {
+            color: var(--primary-orange);
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .comm-panel-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-orange);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 14px 24px;
+            border-radius: 6px;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            width: fit-content;
+        }
+
+        .comm-panel-cta:hover {
+            background: var(--primary-orange-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(249,115,22,0.35);
+        }
+
+        /* ── Process Strip ── */
+        .comm-process {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+
+        .comm-process-steps {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 0;
+            margin-top: 56px;
+            position: relative;
+        }
+
+        /* connector line */
+        .comm-process-steps::before {
+            content: '';
+            position: absolute;
+            top: 35px;
+            left: calc(100% / 12);
+            right: calc(100% / 12);
+            height: 2px;
+            background: linear-gradient(to right, var(--primary-orange), rgba(249,115,22,0.2));
+            z-index: 0;
+        }
+
+        .comm-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 0 10px;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
+
+        .comm-step:hover { transform: translateY(-6px); }
+
+        .comm-step-num {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: #fff;
+            border: 3px solid var(--primary-orange);
+            color: var(--text-dark);
+            font-size: 1.3rem;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+        }
+
+        .comm-step:hover .comm-step-num {
+            background: var(--primary-orange);
+            color: #fff;
+            box-shadow: 0 0 0 8px rgba(249,115,22,0.15);
+            transform: scale(1.1);
+        }
+
+        .comm-step h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .comm-step p {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+
+        /* ── CTA Section ── */
+        .comm-cta {
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comm-cta::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(249,115,22,0.18) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .comm-cta-inner {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .comm-cta h2 {
+            font-size: clamp(1.7rem, 3vw, 2.5rem);
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .comm-cta p {
+            color: #94A3B8;
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 680px;
+        }
+
+        .comm-cta-btns {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .comm-cta-btns .btn-orange {
+            background: linear-gradient(to bottom, var(--btn-orange-top), var(--btn-orange-bottom));
+            color: #fff;
+            font-weight: 700;
+            padding: 14px 28px;
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            white-space: nowrap;
+        }
+
+        .comm-cta-btns .btn-orange:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(249,115,22,0.4);
+        }
+
+        .comm-cta-btns .btn-phone {
+            background: rgba(255,255,255,0.08);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.18);
+            font-weight: 600;
+            padding: 14px 28px;
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+
+        .comm-cta-btns .btn-phone:hover {
+            background: rgba(255,255,255,0.14);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 1024px) {
+            .comm-intro-grid,
+            .comm-why-grid { grid-template-columns: 1fr; gap: 48px; }
+            .comm-intro-visual { display: none; }
+            .comm-services-grid { grid-template-columns: repeat(2, 1fr); }
+            .comm-process-steps { grid-template-columns: repeat(3, 1fr); row-gap: 3rem; }
+            .comm-process-steps::before { display: none; }
+            .comm-cta-inner { grid-template-columns: 1fr; }
+            .comm-cta-btns { flex-direction: row; }
+        }
+
+        @media (max-width: 768px) {
+            .commercial-hero-body { padding: 0 24px 40px; }
+            .comm-stats { grid-template-columns: 1fr; }
+            .comm-services-grid { grid-template-columns: 1fr; }
+            .comm-process-steps { 
+             }
+            .comm-cta-btns { flex-direction: column; }
+        }
+
+        @media (max-width: 480px) {
+            .comm-process-steps { grid-template-columns: 1fr; }
+            .comm-intro-badge { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Trust Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-contact">
+                <a href="tel:3134449734"><i class="fas fa-phone-alt"></i> (313) 444-9734</a>
+                <a href="mailto:bula@buladev.com"><i class="fas fa-envelope"></i> bula@buladev.com</a>
+            </div>
+            <div class="trust-marquee">
+                <div class="trust-track">
+                    <span><i class="fas fa-star"></i> 20 YEARS EXPERIENCE</span>
+                    <span><i class="fas fa-shield-alt"></i> LICENSED & INSURED</span>
+                    <span><i class="fas fa-chart-line"></i> LEAN SIX SIGMA CERTIFIED</span>
+                    <span><i class="fas fa-tasks"></i> PROFESSIONAL PROJECT MANAGEMENT</span>
+                    <span><i class="fas fa-star"></i> 20 YEARS EXPERIENCE</span>
+                    <span><i class="fas fa-shield-alt"></i> LICENSED & INSURED</span>
+                    <span><i class="fas fa-chart-line"></i> LEAN SIX SIGMA CERTIFIED</span>
+                    <span><i class="fas fa-tasks"></i> PROFESSIONAL PROJECT MANAGEMENT</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo-group">
+                <a href="index.html"><img src="img/header logo.png" alt="BULADEV Logo"></a>
+            </div>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <div class="dropdown">
+                    <a href="services.html" class="dropdown-toggle active">
+                        Services <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="residential-construction.html"><i class="fas fa-home"></i> Residential Construction</a>
+                    <a href="commercial.html"><i class="fas fa-building"></i> Commercial Construction</a>
+                    <a href="land-development.html"><i class="fas fa-map-marked-alt"></i> Land Development</a>
+                    <a href="project-management.html"><i class="fas fa-tasks"></i> Project Management</a>
+                    </div>
+                </div>
+                <a href="portfolio.html">Projects</a>
+                <a href="process.html">Our Process</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a href="contact.html" class="btn btn-primary nav-cta">Start Your Project</a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="close-menu-btn" id="close-menu-btn" aria-label="Close menu"><i class="fas fa-times"></i></button>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html" class="active">Services</a>
+        <div class="mobile-submenu">
+            <a href="residential-construction.html">Residential Construction</a>
+            <a href="commercial.html" style="color: var(--primary-orange);">Commercial Construction</a>
+            <a href="land-development.html">Land Development</a>
+            <a href="project-management.html">Project Management</a>
+        </div>
+        <a href="portfolio.html">Projects</a>
+        <a href="process.html">Our Process</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+    </div>
+
+    <main>
+
+        <!-- Commercial Hero -->
+        <section class="commercial-hero">
+            <img src="img/commercial-hero.png" alt="Commercial construction site with excavator and modern glass office building" class="commercial-hero-img">
+
+            <div class="commercial-hero-body">
+                <div class="commercial-hero-eyebrow">
+                    <i class="fas fa-building"></i> Commercial Construction
+                </div>
+                <h1>Commercial Construction That Helps <span>Businesses Move Forward</span></h1>
+                <p class="commercial-hero-sub">Licensed and insured commercial construction, renovations, tenant improvements, and build-outs backed by 20 years of experience.</p>
+                <div class="commercial-hero-actions">
+                    <a href="contact.html" class="btn btn-orange">
+                        Schedule a Commercial Consultation <span class="arrow">➔</span>
+                    </a>
+                    <a href="#comm-services" class="btn btn-blue">
+                        View Commercial Services <span class="arrow">➔</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb-bar">
+            <div class="container">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="services.html">Services</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Commercial Construction</span>
+            </div>
+        </div>
+
+        <!-- Intro -->
+        <section class="comm-intro">
+            <div class="container">
+                <div class="comm-intro-grid">
+
+                    <div class="comm-intro-text reveal reveal-left">
+                        <span class="section-tag">What We Do</span>
+                        <h2>Professional Commercial Construction for Owners, Investors & Tenants</h2>
+                        <p>Commercial construction requires planning, coordination, safety awareness, and a clear understanding of how the space will be used. BULADEV and ASA Construction LLC help business owners, property managers, developers, and investors improve commercial spaces with practical construction solutions and professional project management.</p>
+                        <p>Whether you are renovating an office, preparing a retail space, improving a commercial property, or completing a tenant build-out, we focus on communication, schedule coordination, quality workmanship, and long-term property value.</p>
+                        <a href="contact.html" class="btn btn-primary">Request a Commercial Consultation</a>
+                    </div>
+
+                    <div class="comm-intro-visual reveal reveal-right">
+                        <img src="img/commercial.png" alt="Commercial construction project">
+                        <div class="comm-intro-badge">
+                            <i class="fas fa-award"></i>
+                            <div class="comm-intro-badge-text">
+                                <strong>20+</strong>
+                                <span>Years of Experience</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Stats -->
+                <div class="comm-stats" style="margin-top: 60px;">
+                    <div class="comm-stat reveal reveal-scale">
+                        <div class="comm-stat-num">20+</div>
+                        <div class="comm-stat-label">Years Experience</div>
+                    </div>
+                    <div class="comm-stat reveal reveal-scale">
+                        <div class="comm-stat-num">100%</div>
+                        <div class="comm-stat-label">Licensed & Insured</div>
+                    </div>
+                    <div class="comm-stat reveal reveal-scale">
+                        <div class="comm-stat-num">LSS</div>
+                        <div class="comm-stat-label">Lean Six Sigma Certified</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="comm-services" id="comm-services">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Commercial Projects We Support</span>
+                    <h2 class="section-title">Construction Solutions for Commercial Properties</h2>
+                    <p class="section-desc">From office renovations to full tenant build-outs, we bring professional coordination and quality execution to every commercial project.</p>
+                </div>
+
+                <div class="comm-services-grid reveal-stagger">
+
+                    <div class="comm-service-card reveal">
+                        <div class="comm-service-card-top"></div>
+                        <div class="comm-service-card-body">
+                            <div class="comm-service-icon"><i class="fas fa-briefcase"></i></div>
+                            <h3>Office Improvements</h3>
+                            <p>Create a professional, functional workspace that supports productivity, employee comfort, and business operations. From layout changes to finish upgrades, we help offices work better.</p>
+                            <a href="contact.html" class="comm-service-link">Discuss Your Office Project <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="comm-service-card reveal">
+                        <div class="comm-service-card-top"></div>
+                        <div class="comm-service-card-body">
+                            <div class="comm-service-icon"><i class="fas fa-store"></i></div>
+                            <h3>Retail Build-Outs</h3>
+                            <p>Prepare retail spaces for customers, employees, displays, storage, and daily operations with a clean, organized construction process that keeps your timeline in focus.</p>
+                            <a href="contact.html" class="comm-service-link">Start a Retail Build-Out <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="comm-service-card reveal">
+                        <div class="comm-service-card-top"></div>
+                        <div class="comm-service-card-body">
+                            <div class="comm-service-icon"><i class="fas fa-key"></i></div>
+                            <h3>Tenant Improvements</h3>
+                            <p>We help property owners and tenants prepare commercial spaces for occupancy, operation, and professional presentation — coordinated from scope definition to final walkthrough.</p>
+                            <a href="contact.html" class="comm-service-link">Plan a Tenant Improvement <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="comm-service-card reveal">
+                        <div class="comm-service-card-top"></div>
+                        <div class="comm-service-card-body">
+                            <div class="comm-service-icon"><i class="fas fa-hard-hat"></i></div>
+                            <h3>Commercial Renovations</h3>
+                            <p>Upgrade older or outdated commercial properties with improved finishes, layouts, efficiency, and functionality that supports your business goals and property value.</p>
+                            <a href="contact.html" class="comm-service-link">Get a Renovation Estimate <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="comm-service-card reveal">
+                        <div class="comm-service-card-top"></div>
+                        <div class="comm-service-card-body">
+                            <div class="comm-service-icon"><i class="fas fa-building"></i></div>
+                            <h3>Exterior Improvements</h3>
+                            <p>Improve curb appeal, safety, accessibility, and overall property presentation with exterior construction and upgrade services that make a strong first impression.</p>
+                            <a href="contact.html" class="comm-service-link">Improve Your Exterior <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="comm-service-card reveal">
+                        <div class="comm-service-card-top"></div>
+                        <div class="comm-service-card-body">
+                            <div class="comm-service-icon"><i class="fas fa-tools"></i></div>
+                            <h3>Property Repairs & Upgrades</h3>
+                            <p>We support commercial property repairs and improvements that help protect your investment and maintain tenant or customer experience over the long term.</p>
+                            <a href="contact.html" class="comm-service-link">Schedule Repairs <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Why BULADEV -->
+        <section class="comm-why">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Why Choose Us</span>
+                    <h2 class="section-title">What Sets Our Commercial Work Apart</h2>
+                </div>
+
+                <div class="comm-why-grid">
+
+                    <div class="comm-why-list reveal reveal-left">
+
+                        <div class="comm-why-item">
+                            <div class="comm-why-item-icon"><i class="fas fa-calendar-check"></i></div>
+                            <div class="comm-why-item-text">
+                                <h4>20 Years of Commercial Experience</h4>
+                                <p>We understand the different needs of business owners, property managers, investors, and developers — and how each project type requires a tailored approach.</p>
+                            </div>
+                        </div>
+
+                        <div class="comm-why-item">
+                            <div class="comm-why-item-icon"><i class="fas fa-tasks"></i></div>
+                            <div class="comm-why-item-text">
+                                <h4>Professional Project Management</h4>
+                                <p>We organize scope, schedule, materials, communication, and delivery — so your commercial project stays coordinated from start to finish.</p>
+                            </div>
+                        </div>
+
+                        <div class="comm-why-item">
+                            <div class="comm-why-item-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="comm-why-item-text">
+                                <h4>Lean Six Sigma Mindset</h4>
+                                <p>We apply process improvement thinking to reduce waste, improve coordination, and solve problems more efficiently — keeping commercial projects on track.</p>
+                            </div>
+                        </div>
+
+                        <div class="comm-why-item">
+                            <div class="comm-why-item-icon"><i class="fas fa-comments"></i></div>
+                            <div class="comm-why-item-text">
+                                <h4>Client-Focused Communication</h4>
+                                <p>We keep clients informed, involved, and confident throughout the process — because commercial construction decisions carry real business consequences.</p>
+                            </div>
+                        </div>
+
+                        <div class="comm-why-item">
+                            <div class="comm-why-item-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="comm-why-item-text">
+                                <h4>Licensed & Insured</h4>
+                                <p>We operate with the professionalism, accountability, and coverage that commercial clients require.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right panel -->
+                    <div class="comm-why-panel reveal reveal-right">
+                        <div>
+                            <h3>Ready to Move Your Commercial Project Forward?</h3>
+                            <p>Whether you are renovating a workspace, building out a tenant space, upgrading a commercial property, or planning a larger improvement project — we are ready to help you move forward with confidence.</p>
+                        </div>
+
+                        <div class="comm-panel-divider"></div>
+
+                        <div class="comm-cred-list">
+                            <div class="comm-cred"><i class="fas fa-check-circle"></i> Licensed & Insured Service</div>
+                            <div class="comm-cred"><i class="fas fa-check-circle"></i> Lean Six Sigma Certified</div>
+                            <div class="comm-cred"><i class="fas fa-check-circle"></i> Professional Project Managers</div>
+                            <div class="comm-cred"><i class="fas fa-check-circle"></i> 20+ Years of Experience</div>
+                            <div class="comm-cred"><i class="fas fa-check-circle"></i> Quality Workmanship</div>
+                        </div>
+
+                        <div class="comm-panel-divider"></div>
+
+                        <div>
+                            <p style="color:#94A3B8; font-size:0.9rem; margin-bottom:16px;">
+                                <i class="fas fa-phone-alt" style="color:var(--primary-orange); margin-right:8px;"></i>
+                                Call us at <a href="tel:3134449734" style="color:#fff; font-weight:700;">(313) 444-9734</a>
+                            </p>
+                            <a href="contact.html" class="comm-panel-cta">
+                                <i class="fas fa-arrow-right"></i>
+                                Schedule a Commercial Consultation
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Steps -->
+        <section class="comm-process" id="process">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">How We Work</span>
+                    <h2 class="section-title">From Vision to Completion</h2>
+                    <p class="section-desc">A structured, transparent process that keeps your commercial project coordinated at every phase.</p>
+                </div>
+
+                <div class="comm-process-steps reveal-stagger">
+                    <div class="comm-step reveal">
+                        <div class="comm-step-num">1</div>
+                        <h4>Consultation</h4>
+                        <p>We learn about your property, goals, budget, timeline, and desired outcome.</p>
+                    </div>
+                    <div class="comm-step reveal">
+                        <div class="comm-step-num">2</div>
+                        <h4>Project Review</h4>
+                        <p>We review the scope, site conditions, opportunities, and potential challenges.</p>
+                    </div>
+                    <div class="comm-step reveal">
+                        <div class="comm-step-num">3</div>
+                        <h4>Planning & Estimate</h4>
+                        <p>We define the work, timeline, materials, and cost expectations.</p>
+                    </div>
+                    <div class="comm-step reveal">
+                        <div class="comm-step-num">4</div>
+                        <h4>Project Management</h4>
+                        <p>We coordinate details, communicate updates, and keep the project moving forward.</p>
+                    </div>
+                    <div class="comm-step reveal">
+                        <div class="comm-step-num">5</div>
+                        <h4>Construction</h4>
+                        <p>Work is completed with attention to quality, safety, and site coordination.</p>
+                    </div>
+                    <div class="comm-step reveal">
+                        <div class="comm-step-num">6</div>
+                        <h4>Final Review</h4>
+                        <p>We walk through the completed work, address details, and deliver the finished project.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="comm-cta">
+            <div class="container">
+                <div class="comm-cta-inner reveal">
+                    <div>
+                        <h2>Let Us Help You Build a Commercial Space That Works</h2>
+                        <p>Whether you are planning a renovation, a tenant build-out, exterior improvements, or a larger commercial construction project, BULADEV and ASA Construction LLC are ready to help you move forward with confidence.</p>
+                    </div>
+                    <div class="comm-cta-btns">
+                        <a href="contact.html" class="btn-orange">
+                            <i class="fas fa-clipboard-list"></i> Schedule a Consultation
+                        </a>
+                        <a href="tel:3134449734" class="btn-phone">
+                            <i class="fas fa-phone-alt"></i> (313) 444-9734
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+<!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                   <div class="logo-group">
+                <img href="#home" src="img/footer logo.png" alt="BULADEV Logo">
+            </div>
+                    <p class="footer-desc">BULADEV Building & Land Development, together with ASA Construction LLC, provides licensed and insured residential construction, commercial construction, renovation, build-out, project management, and land development support. Backed by 20 years of experience, certified Lean Six Sigma practices, and professional project managers, we help homeowners, investors, businesses, and property owners plan and complete successful construction projects.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                       <li><a href="#home">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li class="dropdown">
+        <a href="services.html">Services</a>
+
+        <ul class="submenu">
+            <li><a href="residential-construction.html"><i class="fas fa-home"></i> Residential Construction</a></li>
+            <li><a href="commercial.html"><i class="fas fa-building"></i> Commercial Construction</a></li>
+            <li><a href="land-development.html"><i class="fas fa-map-marked-alt"></i> Land Development</a></li>
+            <li><a href="project-management.html"><i class="fas fa-tasks"></i> Project Management</a></li>
+        </ul>
+        
+    </li>
+                        <li><a href="portfolio.html">Projects</a></li>
+                         <li><a href="#faq">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="residential-construction.html">Residential Construction</a></li>
+                        <li><a href="commercial.html">Commercial Construction</a></li>
+                        <li><a href="land-development.html">Renovations</a></li>
+                        <li><a href="project-management.html">Tenant Build-Outs</a></li>
+                        <li><a href="residential-construction.html">Property Improvements</a></li>
+                        <li><a href="land-development.html">Land Development</a></li>
+                        <li><a href="contact.html">Site Preparation Support</a></li>
+                        <li><a href="project-management.html">Project Management</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="contact-list">
+
+                    <a href="tel:3134449734"><i class="fas fa-phone-alt"></i> (313) 444-9734</a>
+                    <a href="mailto:bula@buladev.com"><i class="fas fa-envelope"></i> bula@buladev.com</a>
+                    <a href="www.BULADEV.com"><li><i class="fas fa-globe"></i> www.BULADEV.com</li></a>
+                    <li><i class="fa-solid fa-location-dot"></i> Contact Us for Service Availability in Your Area</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> BULADEV Building & Land Development and ASA Construction LLC. All rights reserved.</p>
+                <p>Licensed & Insured | 20 Years Experience</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Footer year
+        (function() {
+            const el = document.getElementById('current-year');
+            if (el) el.textContent = new Date().getFullYear();
+        })();
+    </script>
+</body>
+</html>

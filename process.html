@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Process | BULADEV Building & Land Development</title>
+    <meta name="description" content="A professional 8-step construction process built around planning, communication, and quality results. BULADEV Building & Land Development and ASA Construction LLC.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* =========================================
+   Variables & Reset
+   ========================================= */
+:root{
+    --primary-orange:#F97316;
+    --primary-orange-hover:#EA580C;
+    --dark-bg:#0F172A;
+    --light-bg:#F8FAFC;
+    --text-dark:#1E293B;
+    --text-gray:#64748B;
+    --text-light:#F1F5F9;
+    --white:#FFFFFF;
+    --border-color:#E2E8F0;
+    --shadow-sm:0 1px 2px 0 rgba(0,0,0,.05);
+    --shadow-md:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06);
+    --shadow-lg:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05);
+    --transition:all 0.3s ease;
+    --navbar-offset:80px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+[id]{scroll-margin-top:var(--navbar-offset);}
+body{font-family:'Inter',sans-serif;color:var(--text-dark);line-height:1.6;background:#fff;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+img{max-width:100%;display:block;}
+a:focus-visible,button:focus-visible{outline:2px solid var(--primary-orange);outline-offset:2px;}
+@media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;}
+}
+
+/* =========================================
+   Scroll Reveal
+   ========================================= */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease;}
+.reveal.reveal-left{transform:translateX(-24px);}
+.reveal.reveal-right{transform:translateX(24px);}
+.reveal.reveal-scale{transform:scale(.95);}
+.reveal.visible{opacity:1;transform:none;}
+
+/* =========================================
+   Utilities
+   ========================================= */
+.container{width:100%;max-width:1280px;margin:0 auto;padding:0 1.5rem;}
+.text-center{text-align:center;}
+.text-orange{color:var(--primary-orange);}
+.section-tag{color:var(--primary-orange);font-weight:700;letter-spacing:1px;font-size:.85rem;text-transform:uppercase;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.75rem 1.75rem;font-weight:600;border-radius:.375rem;transition:var(--transition);cursor:pointer;border:none;font-size:1rem;}
+.btn-primary{background-color:var(--primary-orange);color:#fff;}
+.btn-primary:hover{background-color:var(--primary-orange-hover);transform:translateY(-2px);box-shadow:0 6px 20px rgba(249,115,22,.35);}
+.btn-white{background:#fff;color:var(--primary-orange);}
+.btn-white:hover{background:var(--light-bg);transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.15);}
+.btn-outline-white{background:transparent;color:#fff;border:2px solid #fff;}
+.btn-outline-white:hover{background:#fff;color:var(--dark-bg);transform:translateY(-2px);}
+
+/* =========================================
+   Top Bar
+   ========================================= */
+.top-bar{background:#0F172A;color:#fff;padding:10px 0;overflow:hidden;}
+.top-bar-content{display:flex;align-items:center;gap:30px;}
+.top-contact{display:flex;align-items:center;gap:20px;flex-shrink:0;}
+.top-contact a{color:#fff;font-size:13px;font-weight:500;transition:color .2s;}
+.top-contact a:hover{color:var(--primary-orange);}
+.trust-marquee{flex:1;overflow:hidden;}
+.trust-track{display:flex;align-items:center;gap:40px;width:max-content;animation:marquee 30s linear infinite;}
+.trust-track span{white-space:nowrap;font-size:13px;font-weight:600;}
+.trust-track i{color:var(--primary-orange);}
+.trust-track:hover{animation-play-state:paused;}
+@keyframes marquee{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+@media(max-width:768px){.top-bar{display:none;}}
+
+/* =========================================
+   Navbar
+   ========================================= */
+.navbar{background:#fff;padding:1rem 0;position:sticky;top:0;z-index:100;box-shadow:var(--shadow-sm);transition:var(--transition);}
+.nav-container{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;}
+.logo-group{width:280px;height:60px;flex-shrink:0;overflow:hidden;}
+.logo-group img{width:100%;height:100%;object-fit:contain;object-position:left center;}
+.nav-links{display:flex;align-items:center;gap:2rem;}
+.nav-links a{font-weight:500;color:#0F172A;font-size:.95rem;position:relative;padding-bottom:4px;}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--primary-orange);transition:width .25s;border-radius:2px;}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+.nav-links a:hover,.nav-links a.active{color:var(--primary-orange);}
+.dropdown{position:relative;}
+.dropdown-toggle{display:flex;align-items:center;gap:6px;}
+.dropdown-toggle i{font-size:.75rem;transition:transform .2s;}
+.dropdown:hover .dropdown-toggle i{transform:rotate(180deg);}
+.dropdown-menu{position:absolute;top:100%;left:0;min-width:260px;background:#fff;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.12);padding:10px 0;opacity:0;visibility:hidden;transform:translateY(10px);transition:.3s;z-index:999;}
+.dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0);}
+.dropdown-menu a{display:block;padding:12px 20px;white-space:nowrap;transition:background .2s,color .2s,padding-left .2s;}
+.dropdown-menu a:hover{background:var(--light-bg);color:var(--primary-orange);padding-left:28px;}
+.mobile-menu-btn{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text-dark);transition:color .2s;}
+.mobile-menu-btn:hover{color:var(--primary-orange);}
+.mobile-menu-overlay{position:fixed;inset:0;background:rgba(15,23,42,.5);z-index:999;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;}
+.mobile-menu-overlay.active{opacity:1;visibility:visible;}
+.mobile-menu{position:fixed;top:0;right:-100%;width:80%;max-width:300px;height:100vh;background:#fff;z-index:1000;padding:2rem;display:flex;flex-direction:column;gap:1.25rem;box-shadow:-5px 0 15px rgba(0,0,0,.1);transition:right .3s;overflow-y:auto;}
+.mobile-menu.active{right:0;}
+.mobile-menu a{font-size:1.05rem;font-weight:600;color:var(--text-dark);transition:color .2s;}
+.mobile-menu a.active,.mobile-menu a:hover{color:var(--primary-orange);}
+.mobile-submenu{display:flex;flex-direction:column;gap:.9rem;padding-left:1rem;margin-top:-.5rem;border-left:2px solid var(--border-color);}
+.mobile-submenu a{font-size:.9rem;font-weight:500;color:var(--text-gray);}
+.close-menu-btn{align-self:flex-end;background:none;border:none;font-size:1.5rem;cursor:pointer;transition:color .2s,transform .2s;}
+.close-menu-btn:hover{color:var(--primary-orange);transform:rotate(90deg);}
+
+/* =========================================
+   Page Hero
+   ========================================= */
+.page-hero{
+    position:relative;
+    width:100%;
+    min-height:520px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    background:#0F172A;
+}
+.hero-bg-img{
+    position:absolute;
+    inset:0;
+    background-image:url('img/process-hero.png');
+    background-size:cover;
+    background-position:center 30%;
+    opacity:.35;
+    transition:transform 10s ease;
+}
+.page-hero:hover .hero-bg-img{transform:scale(1.04);}
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(135deg,rgba(15,23,42,.9) 0%,rgba(249,115,22,.12) 100%);
+}
+.hero-inner{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    padding:5rem 1.5rem 4rem;
+    max-width:860px;
+}
+.hero-eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:.5rem;
+    background:rgba(249,115,22,.15);
+    border:1px solid rgba(249,115,22,.4);
+    color:var(--primary-orange);
+    font-weight:700;
+    font-size:.78rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    padding:.4rem 1rem;
+    border-radius:999px;
+    margin-bottom:1.5rem;
+    animation:fadeDown .7s ease both;
+}
+.hero-inner h1{
+    font-family:'Montserrat',sans-serif;
+    font-size:clamp(1.8rem,4.5vw,3.25rem);
+    font-weight:900;
+    color:#fff;
+    line-height:1.15;
+    letter-spacing:-.5px;
+    margin-bottom:1.25rem;
+    animation:fadeDown .7s .1s ease both;
+}
+.hero-inner h1 span{color:var(--primary-orange);}
+.hero-divider{
+    width:70px;height:4px;
+    background:var(--primary-orange);
+    border-radius:2px;
+    margin:.5rem auto 1.5rem;
+    animation:lineGrow .6s .3s ease both;
+}
+@keyframes lineGrow{from{width:0;opacity:0;}to{width:70px;opacity:1;}}
+.hero-inner p{
+    color:rgba(255,255,255,.78);
+    font-size:1.1rem;
+    line-height:1.75;
+    max-width:680px;
+    margin:0 auto 2rem;
+    animation:fadeUp .7s .2s ease both;
+}
+.hero-trust{
+    display:flex;
+    justify-content:center;
+    gap:2rem;
+    flex-wrap:wrap;
+    animation:fadeUp .7s .35s ease both;
+}
+.trust-pill{
+    display:inline-flex;
+    align-items:center;
+    gap:.5rem;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    color:rgba(255,255,255,.85);
+    font-size:.8rem;
+    font-weight:600;
+    padding:.4rem 1rem;
+    border-radius:999px;
+    letter-spacing:.3px;
+}
+.trust-pill i{color:var(--primary-orange);}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-14px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+
+/* =========================================
+   Intro Strip
+   ========================================= */
+.intro-strip{
+    background:var(--light-bg);
+    border-top:4px solid var(--primary-orange);
+    padding:3rem 0;
+    text-align:center;
+}
+.intro-strip p{
+    font-size:1.05rem;
+    color:var(--text-gray);
+    max-width:860px;
+    margin:0 auto;
+    line-height:1.8;
+}
+
+/* =========================================
+   Process Timeline Section
+   ========================================= */
+.process-section{padding:5rem 0;background:#fff;}
+.process-header{
+    text-align:center;
+    margin-bottom:4rem;
+}
+.process-header h2{
+    font-family:'Montserrat',sans-serif;
+    font-size:clamp(1.75rem,3vw,2.5rem);
+    font-weight:900;
+    color:var(--text-dark);
+    margin:.5rem 0 1rem;
+}
+.process-header p{color:var(--text-gray);font-size:1rem;max-width:650px;margin:0 auto;}
+
+/* Timeline layout */
+.timeline{
+    position:relative;
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 1rem;
+}
+
+/* Vertical center line */
+.timeline::before{
+    content:'';
+    position:absolute;
+    top:0;bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:3px;
+    background:linear-gradient(to bottom,var(--primary-orange) 0%,rgba(249,115,22,.15) 100%);
+    border-radius:3px;
+}
+
+.timeline-item{
+    display:grid;
+    grid-template-columns:1fr 60px 1fr;
+    gap:0;
+    align-items:start;
+    margin-bottom:3.5rem;
+    position:relative;
+}
+
+/* Left-side items */
+.timeline-item.left .timeline-content{
+    grid-column:1;
+    text-align:right;
+    padding-right:2.5rem;
+}
+.timeline-item.left .timeline-node{grid-column:2;}
+.timeline-item.left .timeline-spacer{grid-column:3;}
+
+/* Right-side items */
+.timeline-item.right .timeline-spacer{grid-column:1;}
+.timeline-item.right .timeline-node{grid-column:2;}
+.timeline-item.right .timeline-content{
+    grid-column:3;
+    text-align:left;
+    padding-left:2.5rem;
+}
+
+/* Center node */
+.timeline-node{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    z-index:1;
+}
+.node-circle{
+    width:52px;
+    height:52px;
+    background:#fff;
+    border:3px solid var(--primary-orange);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Montserrat',sans-serif;
+    font-size:1.1rem;
+    font-weight:900;
+    color:var(--primary-orange);
+    transition:background .3s,color .3s,transform .3s,box-shadow .3s;
+    flex-shrink:0;
+}
+.timeline-item:hover .node-circle{
+    background:var(--primary-orange);
+    color:#fff;
+    transform:scale(1.15);
+    box-shadow:0 0 0 8px rgba(249,115,22,.15);
+}
+
+/* Content card */
+.timeline-content{
+    background:#fff;
+    border:1px solid var(--border-color);
+    border-radius:.75rem;
+    padding:1.75rem;
+    box-shadow:var(--shadow-sm);
+    transition:transform .3s,box-shadow .3s,border-color .3s;
+    position:relative;
+}
+.timeline-content:hover{
+    transform:translateY(-4px);
+    box-shadow:0 16px 40px rgba(0,0,0,.1);
+    border-color:rgba(249,115,22,.3);
+}
+.step-label{
+    display:inline-flex;
+    align-items:center;
+    gap:.4rem;
+    color:var(--primary-orange);
+    font-size:.75rem;
+    font-weight:700;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    margin-bottom:.6rem;
+}
+.timeline-content h3{
+    font-family:'Montserrat',sans-serif;
+    font-size:1.15rem;
+    font-weight:800;
+    color:var(--text-dark);
+    margin-bottom:.6rem;
+    line-height:1.3;
+}
+.timeline-content p{
+    color:var(--text-gray);
+    font-size:.9rem;
+    line-height:1.65;
+    margin:0;
+}
+/* Arrow pointing to center line */
+.timeline-item.left .timeline-content::after{
+    content:'';
+    position:absolute;
+    top:1.5rem;right:-8px;
+    width:0;height:0;
+    border-top:8px solid transparent;
+    border-bottom:8px solid transparent;
+    border-left:8px solid var(--border-color);
+}
+.timeline-item.right .timeline-content::before{
+    content:'';
+    position:absolute;
+    top:1.5rem;left:-8px;
+    width:0;height:0;
+    border-top:8px solid transparent;
+    border-bottom:8px solid transparent;
+    border-right:8px solid var(--border-color);
+}
+
+/* Step icon badge */
+.step-icon{
+    width:2.25rem;height:2.25rem;
+    background:rgba(249,115,22,.1);
+    border-radius:.4rem;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--primary-orange);
+    font-size:1rem;
+    margin-bottom:1rem;
+    transition:background .3s,transform .3s;
+}
+.timeline-content:hover .step-icon{
+    background:var(--primary-orange);
+    color:#fff;
+    transform:scale(1.1) rotate(-5deg);
+}
+
+/* Mobile: single column */
+@media(max-width:768px){
+    .timeline::before{left:24px;transform:none;}
+    .timeline-item{
+        grid-template-columns:48px 1fr;
+        grid-template-rows:auto;
+        margin-bottom:2.5rem;
+    }
+    .timeline-item.left .timeline-content,
+    .timeline-item.right .timeline-content{
+        grid-column:2;
+        text-align:left;
+        padding-left:1.25rem;
+        padding-right:1.25rem;
+    }
+    .timeline-item.left .timeline-content::after{display:none;}
+    .timeline-item.right .timeline-content::before{display:none;}
+    .timeline-item.left .timeline-node,
+    .timeline-item.right .timeline-node{grid-column:1;grid-row:1;}
+    .timeline-item.left .timeline-spacer,
+    .timeline-item.right .timeline-spacer{display:none;}
+    .node-circle{width:40px;height:40px;font-size:.9rem;}
+}
+
+/* =========================================
+   Why It Works Strip
+   ========================================= */
+.why-strip{
+    background:var(--dark-bg);
+    padding:4.5rem 0;
+}
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:2rem;
+}
+.why-card{
+    text-align:center;
+    padding:2rem 1.25rem;
+    border-radius:.5rem;
+    border:1px solid rgba(255,255,255,.07);
+    background:rgba(255,255,255,.03);
+    transition:background .3s,transform .3s;
+}
+.why-card:hover{background:rgba(255,255,255,.07);transform:translateY(-4px);}
+.why-icon{
+    width:3rem;height:3rem;
+    background:rgba(249,115,22,.12);
+    border-radius:.5rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--primary-orange);
+    font-size:1.3rem;
+    margin:0 auto 1.25rem;
+    transition:background .3s,transform .3s;
+}
+.why-card:hover .why-icon{background:var(--primary-orange);color:#fff;transform:scale(1.1) rotate(-5deg);}
+.why-card h3{font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;color:#fff;margin-bottom:.5rem;}
+.why-card p{font-size:.85rem;color:rgba(255,255,255,.55);margin:0;line-height:1.6;}
+@media(max-width:1024px){.why-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.why-grid{grid-template-columns:1fr;}}
+
+/* =========================================
+   CTA
+   ========================================= */
+.cta-section{
+    background:var(--primary-orange);
+    color:#fff;
+    padding:5rem 0;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+.cta-section::before{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(120deg,transparent 40%,rgba(255,255,255,.06) 50%,transparent 60%);
+    background-size:200% 100%;
+    animation:shimmer 3s linear infinite;
+}
+@keyframes shimmer{0%{background-position:200% 0;}100%{background-position:-200% 0;}}
+.cta-section h2{font-family:'Montserrat',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:900;margin-bottom:1rem;position:relative;}
+.cta-section p{font-size:1.05rem;opacity:.9;max-width:620px;margin:0 auto 2rem;position:relative;line-height:1.75;}
+.cta-buttons{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;position:relative;}
+
+/* =========================================
+   Footer
+   ========================================= */
+.footer{background:var(--dark-bg);color:var(--text-light);padding:4rem 0 2rem;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;}
+.footer-logo-wrap{width:280px;height:60px;overflow:hidden;}
+.footer-logo-wrap img{width:100%;height:100%;object-fit:contain;object-position:left center;}
+.footer-desc{color:#9CA3AF;margin-top:1.5rem;font-size:.875rem;max-width:300px;line-height:1.7;text-align:justify;}
+.footer-col h4{color:var(--primary-orange);font-size:1.125rem;font-weight:700;margin-bottom:1.5rem;}
+.footer-col ul{display:flex;flex-direction:column;gap:.75rem;}
+.footer-col ul a,.footer-col ul li{color:#9CA3AF;font-size:.875rem;transition:color .2s,padding-left .2s;}
+.footer-col ul a:hover{color:#fff;padding-left:4px;}
+.contact-list li{display:flex;align-items:center;gap:.75rem;}
+.contact-list i{color:var(--primary-orange);width:1rem;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:2rem;display:flex;justify-content:space-between;color:#6B7280;font-size:.875rem;}
+@media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:768px){
+    .nav-links,.nav-cta{display:none;}
+    .mobile-menu-btn{display:block;}
+    .footer-grid{grid-template-columns:1fr;gap:2rem;}
+    .footer-bottom{flex-direction:column;gap:1rem;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+    <div class="container top-bar-content">
+        <div class="top-contact">
+            <a href="tel:3134449734"><i class="fas fa-phone-alt"></i> (313) 444-9734</a>
+            <a href="mailto:bula@buladev.com"><i class="fas fa-envelope"></i> bula@buladev.com</a>
+        </div>
+        <div class="trust-marquee">
+            <div class="trust-track">
+                <span><i class="fas fa-star"></i> 20 YEARS EXPERIENCE</span>
+                <span><i class="fas fa-shield-alt"></i> LICENSED &amp; INSURED</span>
+                <span><i class="fas fa-chart-line"></i> LEAN SIX SIGMA CERTIFIED</span>
+                <span><i class="fas fa-tasks"></i> PROFESSIONAL PROJECT MANAGEMENT</span>
+                <span><i class="fas fa-star"></i> 20 YEARS EXPERIENCE</span>
+                <span><i class="fas fa-shield-alt"></i> LICENSED &amp; INSURED</span>
+                <span><i class="fas fa-chart-line"></i> LEAN SIX SIGMA CERTIFIED</span>
+                <span><i class="fas fa-tasks"></i> PROFESSIONAL PROJECT MANAGEMENT</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+    <div class="container nav-container">
+        <div class="logo-group">
+            <a href="index.html"><img src="img/header logo.png" alt="BULADEV Logo"></a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <div class="dropdown">
+                <a href="services.html" class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                    <a href="residential-construction.html"><i class="fas fa-home"></i> Residential Construction</a>
+                    <a href="commercial.html"><i class="fas fa-building"></i> Commercial Construction</a>
+                    <a href="land-development.html"><i class="fas fa-map-marked-alt"></i> Land Development</a>
+                    <a href="project-management.html"><i class="fas fa-tasks"></i> Project Management</a>
+                </div>
+            </div>
+            <a href="portfolio.html">Projects</a>
+            <a href="process.html" class="active">Our Process</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <a href="contact.html" class="btn btn-primary nav-cta">Start Your Project</a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+    </div>
+</header>
+
+<div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+<div class="mobile-menu" id="mobile-menu">
+    <button class="close-menu-btn" id="close-menu-btn" aria-label="Close menu"><i class="fas fa-times"></i></button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <div class="mobile-submenu">
+        <a href="residential-construction.html">Residential Construction</a>
+        <a href="commercial.html">Commercial Construction</a>
+        <a href="land-development.html">Land Development</a>
+        <a href="project-management.html">Project Management</a>
+    </div>
+    <a href="portfolio.html">Projects</a>
+    <a href="process.html" class="active">Our Process</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+</div>
+
+<main>
+
+<!-- ========== HERO ========== -->
+<section class="page-hero">
+    <div class="hero-bg-img"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+        <div class="hero-eyebrow"><i class="fas fa-sitemap"></i> Our Process</div>
+        <h1>Clear Steps. Better Communication.<br><span>Stronger Results.</span></h1>
+        <div class="hero-divider"></div>
+        <p>A professional process designed to help construction and development projects move from vision to completion.</p>
+        <div class="hero-trust">
+            <span class="trust-pill"><i class="fas fa-award"></i> 20 Years Experience</span>
+            <span class="trust-pill"><i class="fas fa-shield-alt"></i> Licensed &amp; Insured</span>
+            <span class="trust-pill"><i class="fas fa-chart-line"></i> Lean Six Sigma</span>
+            <span class="trust-pill"><i class="fas fa-users"></i> Pro Project Managers</span>
+        </div>
+    </div>
+</section>
+
+<!-- ========== INTRO STRIP ========== -->
+<div class="intro-strip">
+    <div class="container">
+        <p>Construction and development can feel overwhelming when there is no clear plan. Our process is designed to help clients understand the path from idea to completion. With 20 years of experience, licensed and insured service, certified Lean Six Sigma training, and professional project management, we focus on planning, communication, coordination, and quality review.</p>
+    </div>
+</div>
+
+<!-- ========== TIMELINE STEPS ========== -->
+<section class="process-section">
+    <div class="container">
+        <div class="process-header reveal">
+            <span class="section-tag"><i class="fas fa-route"></i> Step by Step</span>
+            <h2>From First Call to Final Delivery</h2>
+            <p>Every project follows a structured path built around clarity, coordination, and accountability at each phase.</p>
+        </div>
+
+        <div class="timeline">
+
+            <!-- Step 1 — Left -->
+            <div class="timeline-item left reveal reveal-left" style="transition-delay:0ms">
+                <div class="timeline-content">
+                    <div class="step-icon"><i class="fas fa-comments"></i></div>
+                    <div class="step-label"><i class="fas fa-circle" style="font-size:.4rem"></i> Step 1</div>
+                    <h3>Initial Consultation</h3>
+                    <p>We begin by discussing your project goals, property details, budget expectations, timeline, and overall vision so we fully understand what you want to accomplish.</p>
+                </div>
+                <div class="timeline-node">
+                    <div class="node-circle">1</div>
+                </div>
+                <div class="timeline-spacer"></div>
+            </div>
+
+            <!-- Step 2 — Right -->
+            <div class="timeline-item right reveal reveal-right" style="transition-delay:80ms">
+                <div class="timeline-spacer"></div>
+                <div class="timeline-node">
+                    <div class="node-circle">2</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="step-icon"><i class="fas fa-search-location"></i></div>
+                    <div class="step-label"><i class="fas fa-circle" style="font-size:.4rem"></i> Step 2</div>
+                    <h3>Property and Scope Review</h3>
+                    <p>We review the project site or property conditions and identify what work may be needed to achieve your goals and move the project forward effectively.</p>
+                </div>
+            </div>
+
+            <!-- Step 3 — Left -->
+            <div class="timeline-item left reveal reveal-left" style="transition-delay:160ms">
+                <div class="timeline-content">
+                    <div class="step-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="step-label"><i class="fas fa-circle" style="font-size:.4rem"></i> Step 3</div>
+                    <h3>Planning and Proposal</h3>
+                    <p>We prepare a project scope, timeline expectations, and cost considerations so you can make informed decisions before any work begins.</p>
+                </div>
+                <div class="timeline-node">
+                    <div class="node-circle">3</div>
+                </div>
+                <div class="timeline-spacer"></div>
+            </div>
+
+            <!-- Step 4 — Right -->
+            <div class="timeline-item right reveal reveal-right" style="transition-delay:240ms">
+                <div class="timeline-spacer"></div>
+                <div class="timeline-node">
+                    <div class="node-circle">4</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="step-icon"><i class="fas fa-clipboard-list"></i></div>
+                    <div class="step-label"><i class="fas fa-circle" style="font-size:.4rem"></i> Step 4</div>
+                    <h3>Project Preparation</h3>
+                    <p>Before construction begins, we coordinate the details, materials, schedule, team requirements, and project communication expectations to set the project up for success.</p>
+                </div>
+            </div>
+
+            <!-- Step 5 — Left -->
+            <div class="timeline-item left reveal reveal-left" style="transition-delay:320ms">
+                <div class="timeline-content">
+                    <div class="step-icon"><i class="fas fa-hard-hat"></i></div>
+                    <div class="step-label"><i class="fas fa-circle" style="font-size:.4rem"></i> Step 5</div>
+                    <h3>Construction and Coordination</h3>
+                    <p>Our team begins the work according to the approved plan while maintaining open communication and keeping the project on track throughout each phase.</p>
+                </div>
+                <div class="timeline-node">
+                    <div class="node-circle">5</div>
+                </div>
+                <div class="timeline-spacer"></div>
+            </div>
+
+            <!-- Step 6 — Right -->
+            <div class="timeline-item right reveal reveal-right" style="transition-delay:400ms">
+                <div class="timeline-spacer"></div>
+                <div class="timeline-node">
+                    <div class="node-circle">6</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="step-icon"><i class="fas fa-bell"></i></div>
+                    <div class="step-label"><i class="fas fa-circle" style="font-size:.4rem"></i> Step 6</div>
+                    <h3>Progress Updates</h3>
+                    <p>We keep you informed as work moves forward and communicate important updates, adjustments, or decisions so you are never left wondering about the status of your project.</p>
+                </div>
+            </div>
+
+            <!-- Step 7 — Left -->
+            <div class="timeline-item left reveal reveal-left" style="transition-delay:480ms">
+                <div class="timeline-content">
+                    <div class="step-icon"><i class="fas fa-tasks"></i></div>
+                    <div class="step-label"><i class="fas fa-circle" style="font-size:.4rem"></i> Step 7</div>
+                    <h3>Quality Review</h3>
+                    <p>We review the work at key stages and address details to support a strong final result, catching issues early and ensuring the finished work meets expectations.</p>
+                </div>
+                <div class="timeline-node">
+                    <div class="node-circle">7</div>
+                </div>
+                <div class="timeline-spacer"></div>
+            </div>
+
+            <!-- Step 8 — Right -->
+            <div class="timeline-item right reveal reveal-right" style="transition-delay:560ms">
+                <div class="timeline-spacer"></div>
+                <div class="timeline-node">
+                    <div class="node-circle">8</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="step-icon"><i class="fas fa-flag-checkered"></i></div>
+                    <div class="step-label"><i class="fas fa-circle" style="font-size:.4rem"></i> Step 8</div>
+                    <h3>Final Walkthrough and Project Delivery</h3>
+                    <p>Once work is completed, we review the project with you, address any final details, and deliver the finished project with the confidence that the work was done right.</p>
+                </div>
+            </div>
+
+        </div><!-- /timeline -->
+    </div>
+</section>
+
+<!-- ========== WHY IT WORKS STRIP ========== -->
+<section class="why-strip">
+    <div class="container">
+        <div style="text-align:center;margin-bottom:3rem;" class="reveal">
+            <span class="section-tag" style="color:var(--primary-orange);">Why Our Process Works</span>
+            <h2 style="font-family:'Montserrat',sans-serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:800;color:#fff;margin-top:.75rem;">Built Around What Clients Actually Need</h2>
+        </div>
+        <div class="why-grid">
+            <div class="why-card reveal" style="transition-delay:0ms">
+                <div class="why-icon"><i class="fas fa-map-signs"></i></div>
+                <h3>Clarity from Day One</h3>
+                <p>Every step is defined so you know exactly where the project stands and what comes next.</p>
+            </div>
+            <div class="why-card reveal" style="transition-delay:90ms">
+                <div class="why-icon"><i class="fas fa-comments"></i></div>
+                <h3>Consistent Communication</h3>
+                <p>We keep you informed throughout every phase so decisions are made with confidence.</p>
+            </div>
+            <div class="why-card reveal" style="transition-delay:180ms">
+                <div class="why-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Lean Six Sigma Thinking</h3>
+                <p>Process improvement principles reduce waste, improve coordination, and keep projects moving efficiently.</p>
+            </div>
+            <div class="why-card reveal" style="transition-delay:270ms">
+                <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Accountability at Every Stage</h3>
+                <p>Quality reviews and structured hand-offs mean nothing falls through the cracks from start to finish.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CTA ========== -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Ready for a construction process built around planning, communication, and quality?</h2>
+        <p>Whether you are starting a residential project, commercial improvement, or land development opportunity, BULADEV and ASA Construction LLC are ready to guide you through every step.</p>
+        <div class="cta-buttons">
+            <a href="tel:3134449734" class="btn btn-white"><i class="fas fa-phone-alt"></i> (313) 444-9734</a>
+            <a href="contact.html" class="btn btn-outline-white">Request a Consultation</a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                   <div class="logo-group">
+                <img href="#home" src="img/footer logo.png" alt="BULADEV Logo">
+            </div>
+                    <p class="footer-desc">BULADEV Building & Land Development, together with ASA Construction LLC, provides licensed and insured residential construction, commercial construction, renovation, build-out, project management, and land development support. Backed by 20 years of experience, certified Lean Six Sigma practices, and professional project managers, we help homeowners, investors, businesses, and property owners plan and complete successful construction projects.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                       <li><a href="#home">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li class="dropdown">
+        <a href="services.html">Services</a>
+
+        <ul class="submenu">
+            <li><a href="residential-construction.html"><i class="fas fa-home"></i> Residential Construction</a></li>
+            <li><a href="commercial.html"><i class="fas fa-building"></i> Commercial Construction</a></li>
+            <li><a href="land-development.html"><i class="fas fa-map-marked-alt"></i> Land Development</a></li>
+            <li><a href="project-management.html"><i class="fas fa-tasks"></i> Project Management</a></li>
+        </ul>
+        
+    </li>
+                        <li><a href="portfolio.html">Projects</a></li>
+                         <li><a href="#faq">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="residential-construction.html">Residential Construction</a></li>
+                        <li><a href="commercial.html">Commercial Construction</a></li>
+                        <li><a href="land-development.html">Renovations</a></li>
+                        <li><a href="project-management.html">Tenant Build-Outs</a></li>
+                        <li><a href="residential-construction.html">Property Improvements</a></li>
+                        <li><a href="land-development.html">Land Development</a></li>
+                        <li><a href="contact.html">Site Preparation Support</a></li>
+                        <li><a href="project-management.html">Project Management</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="contact-list">
+
+                    <a href="tel:3134449734"><i class="fas fa-phone-alt"></i> (313) 444-9734</a>
+                    <a href="mailto:bula@buladev.com"><i class="fas fa-envelope"></i> bula@buladev.com</a>
+                    <a href="www.BULADEV.com"><li><i class="fas fa-globe"></i> www.BULADEV.com</li></a>
+                    <li><i class="fa-solid fa-location-dot"></i> Contact Us for Service Availability in Your Area</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> BULADEV Building & Land Development and ASA Construction LLC. All rights reserved.</p>
+                <p>Licensed & Insured | 20 Years Experience</p>
+            </div>
+        </div>
+    </footer>
+
+<script>
+(function(){
+    const btn=document.getElementById('mobile-menu-btn');
+    const menu=document.getElementById('mobile-menu');
+    const overlay=document.getElementById('mobile-menu-overlay');
+    const close=document.getElementById('close-menu-btn');
+    function openMenu(){menu.classList.add('active');overlay.classList.add('active');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+    function closeMenu(){menu.classList.remove('active');overlay.classList.remove('active');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+    if(btn)btn.addEventListener('click',openMenu);
+    if(close)close.addEventListener('click',closeMenu);
+    if(overlay)overlay.addEventListener('click',closeMenu);
+    document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',closeMenu));
+})();
+(function(){
+    const nb=document.getElementById('navbar');
+    if(!nb)return;
+    window.addEventListener('scroll',()=>{nb.style.boxShadow=window.scrollY>10?'0 4px 20px rgba(0,0,0,.1)':'0 1px 2px rgba(0,0,0,.05)';}),{passive:true};
+})();
+(function(){
+    const io=new IntersectionObserver(entries=>{
+        entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}}); 
+    },{threshold:0.1});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+})();
+document.getElementById('current-year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>

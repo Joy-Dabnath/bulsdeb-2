@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Portfolio | BULADEV Building & Land Development</title>
+    <meta name="description" content="Explore residential, commercial, and land development projects by BULADEV Building & Land Development and ASA Construction LLC.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* =========================================
+   CSS Variables & Reset
+   ========================================= */
+:root {
+    --primary-orange: #F97316;
+    --primary-orange-hover: #EA580C;
+    --btn-orange-top: #f99d35;
+    --btn-orange-bottom: #e85902;
+    --btn-blue-top: #1c4774;
+    --btn-blue-bottom: #091c35;
+    --dark-bg: #0F172A;
+    --darker-bg: #020617;
+    --light-bg: #F8FAFC;
+    --text-dark: #1E293B;
+    --text-gray: #64748B;
+    --text-light: #F1F5F9;
+    --white: #FFFFFF;
+    --border-color: #E2E8F0;
+    --font-main: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --shadow-sm: 0 1px 2px 0 rgba(0,0,0,.05);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
+    --transition: all 0.3s ease;
+    --navbar-offset: 80px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+[id]{scroll-margin-top:var(--navbar-offset);}
+body{font-family:'Inter',sans-serif;color:var(--text-dark);line-height:1.6;background-color:var(--white);}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+img{max-width:100%;display:block;}
+
+a:focus-visible,button:focus-visible{outline:2px solid var(--primary-orange);outline-offset:2px;}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;}
+}
+
+/* =========================================
+   Scroll Reveal
+   ========================================= */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.reveal-left{transform:translateX(-24px);}
+.reveal.reveal-right{transform:translateX(24px);}
+.reveal.reveal-scale{transform:scale(.95);}
+.reveal.visible{opacity:1;transform:none;}
+
+/* =========================================
+   Utility
+   ========================================= */
+.container{width:100%;max-width:1280px;margin:0 auto;padding:0 1.5rem;}
+.text-center{text-align:center;}
+.text-orange{color:var(--primary-orange);}
+.section-tag{color:var(--primary-orange);font-weight:700;letter-spacing:1px;font-size:.9rem;text-transform:uppercase;}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.75rem 1.75rem;font-weight:600;border-radius:.375rem;transition:var(--transition);cursor:pointer;border:none;font-size:1rem;}
+.btn-primary{background-color:var(--primary-orange);color:var(--white);}
+.btn-primary:hover{background-color:var(--primary-orange-hover);transform:translateY(-2px);box-shadow:0 6px 20px rgba(249,115,22,.35);}
+.btn-outline{background:transparent;color:var(--text-dark);border:2px solid var(--border-color);}
+.btn-outline:hover{border-color:var(--primary-orange);color:var(--primary-orange);transform:translateY(-2px);}
+.btn-white{background:var(--white);color:var(--primary-orange);}
+.btn-white:hover{background:var(--light-bg);transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.15);}
+.btn-outline-white{background:transparent;color:var(--white);border:2px solid var(--white);}
+.btn-outline-white:hover{background:var(--white);color:var(--dark-bg);transform:translateY(-2px);}
+
+/* =========================================
+   Top Bar
+   ========================================= */
+.top-bar{background:#0F172A;color:#fff;padding:10px 0;overflow:hidden;}
+.top-bar-content{display:flex;align-items:center;gap:30px;}
+.top-contact{display:flex;align-items:center;gap:20px;flex-shrink:0;}
+.top-contact a{color:#fff;font-size:13px;font-weight:500;transition:color .2s;}
+.top-contact a:hover{color:var(--primary-orange);}
+.trust-marquee{flex:1;overflow:hidden;position:relative;}
+.trust-track{display:flex;align-items:center;gap:40px;width:max-content;animation:marquee 30s linear infinite;}
+.trust-track span{white-space:nowrap;font-size:13px;font-weight:600;}
+.trust-track i{color:var(--primary-orange);}
+.trust-track:hover{animation-play-state:paused;}
+@keyframes marquee{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+@media(max-width:768px){.top-bar{display:none;}}
+
+/* =========================================
+   Navbar
+   ========================================= */
+.navbar{background-color:var(--white);padding:1rem 0;position:sticky;top:0;z-index:100;box-shadow:var(--shadow-sm);transition:var(--transition);}
+.nav-container{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;}
+.logo-group{width:280px;height:60px;flex-shrink:0;overflow:hidden;}
+.logo-group img{width:100%;height:100%;object-fit:contain;object-position:left center;}
+.nav-links{display:flex;align-items:center;gap:2rem;}
+.nav-links a{font-weight:500;color:#0F172A;font-size:.95rem;position:relative;padding-bottom:4px;}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--primary-orange);transition:width .25s ease;border-radius:2px;}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+.nav-links a:hover,.nav-links a.active{color:var(--primary-orange);}
+.dropdown{position:relative;}
+.dropdown-toggle{display:flex;align-items:center;gap:6px;}
+.dropdown-toggle i{font-size:.75rem;transition:transform .2s;}
+.dropdown:hover .dropdown-toggle i,.dropdown:focus-within .dropdown-toggle i{transform:rotate(180deg);}
+.dropdown-menu{position:absolute;top:100%;left:0;min-width:260px;background:#fff;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.12);padding:10px 0;opacity:0;visibility:hidden;transform:translateY(10px);transition:.3s ease;z-index:999;}
+.dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0);}
+.dropdown-menu a{display:block;padding:12px 20px;white-space:nowrap;transition:background .2s,color .2s,padding-left .2s;}
+.dropdown-menu a:hover{background-color:var(--light-bg);color:var(--primary-orange);padding-left:28px;}
+.mobile-menu-btn{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text-dark);transition:color .2s;}
+.mobile-menu-btn:hover{color:var(--primary-orange);}
+.mobile-menu-overlay{position:fixed;inset:0;background:rgba(15,23,42,.5);z-index:999;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;}
+.mobile-menu-overlay.active{opacity:1;visibility:visible;}
+.mobile-menu{position:fixed;top:0;right:-100%;width:80%;max-width:300px;height:100vh;background:var(--white);z-index:1000;padding:2rem;display:flex;flex-direction:column;gap:1.25rem;box-shadow:-5px 0 15px rgba(0,0,0,.1);transition:right .3s ease;overflow-y:auto;}
+.mobile-menu.active{right:0;}
+.mobile-menu a{font-size:1.05rem;font-weight:600;color:var(--text-dark);transition:color .2s;}
+.mobile-menu a.active,.mobile-menu a:hover{color:var(--primary-orange);}
+.mobile-submenu{display:flex;flex-direction:column;gap:.9rem;padding-left:1rem;margin-top:-.5rem;border-left:2px solid var(--border-color);}
+.mobile-submenu a{font-size:.9rem;font-weight:500;color:var(--text-gray);}
+.close-menu-btn{align-self:flex-end;background:none;border:none;font-size:1.5rem;cursor:pointer;transition:color .2s,transform .2s;}
+.close-menu-btn:hover{color:var(--primary-orange);transform:rotate(90deg);}
+
+/* =========================================
+   Portfolio Hero
+   ========================================= */
+.portfolio-hero{
+    position:relative;
+    width:100%;
+    min-height:480px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    background:#0F172A;
+}
+.hero-bg{
+    position:absolute;
+    inset:0;
+    background-image:url('img/project.png');
+    background-size:cover;
+    background-position:center;
+    opacity:.38;
+    transition:transform 8s ease;
+}
+.portfolio-hero:hover .hero-bg{transform:scale(1.03);}
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(135deg,rgba(15,23,42,.85) 0%,rgba(249,115,22,.18) 100%);
+}
+.hero-inner{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    padding:4rem 1.5rem;
+    max-width:900px;
+}
+.hero-eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:.5rem;
+    background:rgba(249,115,22,.15);
+    border:1px solid rgba(249,115,22,.4);
+    color:var(--primary-orange);
+    font-weight:700;
+    font-size:.8rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    padding:.4rem 1rem;
+    border-radius:999px;
+    margin-bottom:1.5rem;
+    animation:fadeDown .7s ease both;
+}
+.hero-inner h1{
+    font-family:'Montserrat',sans-serif;
+    font-size:clamp(2rem,5vw,3.75rem);
+    font-weight:900;
+    color:#fff;
+    line-height:1.1;
+    letter-spacing:-1px;
+    margin-bottom:1.25rem;
+    animation:fadeDown .7s .1s ease both;
+}
+.hero-inner h1 span{color:var(--primary-orange);}
+.orange-line{border:none;height:4px;background:var(--primary-orange);width:80px;margin:0 auto 1.5rem;border-radius:2px;animation:lineGrow .6s .3s ease both;}
+@keyframes lineGrow{from{width:0;opacity:0;}to{width:80px;opacity:1;}}
+.hero-inner p{
+    color:rgba(255,255,255,.8);
+    font-size:1.15rem;
+    max-width:640px;
+    margin:0 auto 2rem;
+    animation:fadeUp .7s .2s ease both;
+}
+.hero-stats{
+    display:flex;
+    justify-content:center;
+    gap:2.5rem;
+    flex-wrap:wrap;
+    animation:fadeUp .7s .35s ease both;
+}
+.hero-stat{text-align:center;}
+.hero-stat .num{font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:900;color:var(--primary-orange);}
+.hero-stat .lbl{font-size:.8rem;color:rgba(255,255,255,.65);font-weight:600;letter-spacing:.5px;text-transform:uppercase;}
+
+@keyframes fadeDown{from{opacity:0;transform:translateY(-16px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+
+/* =========================================
+   Intro Strip
+   ========================================= */
+.intro-strip{
+    background:var(--light-bg);
+    border-top:4px solid var(--primary-orange);
+    padding:3rem 0;
+    text-align:center;
+}
+.intro-strip p{
+    font-size:1.1rem;
+    color:var(--text-gray);
+    max-width:860px;
+    margin:0 auto;
+    line-height:1.75;
+}
+
+/* =========================================
+   Filter Bar
+   ========================================= */
+.filter-bar{
+    padding:2.5rem 0 0;
+    text-align:center;
+}
+.filter-label{
+    font-size:.8rem;
+    font-weight:700;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--text-gray);
+    margin-bottom:1rem;
+}
+.filter-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:.6rem;
+}
+.filter-btn{
+    padding:.5rem 1.25rem;
+    border-radius:999px;
+    border:2px solid var(--border-color);
+    background:var(--white);
+    color:var(--text-gray);
+    font-weight:600;
+    font-size:.875rem;
+    cursor:pointer;
+    transition:var(--transition);
+}
+.filter-btn:hover,.filter-btn.active{
+    background:var(--primary-orange);
+    border-color:var(--primary-orange);
+    color:#fff;
+    box-shadow:0 4px 14px rgba(249,115,22,.3);
+}
+
+/* =========================================
+   Category Sections
+   ========================================= */
+.category-section{padding:4rem 0;}
+.category-section + .category-section{padding-top:0;}
+
+.category-header{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:1rem;
+    margin-bottom:2rem;
+    padding-bottom:1.25rem;
+    border-bottom:2px solid var(--border-color);
+    flex-wrap:wrap;
+}
+.category-header-left{}
+.cat-tag{
+    font-size:.75rem;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--primary-orange);
+    margin-bottom:.35rem;
+}
+.cat-title{
+    font-family:'Montserrat',sans-serif;
+    font-size:1.75rem;
+    font-weight:800;
+    color:var(--text-dark);
+}
+.cat-count{
+    font-size:.85rem;
+    color:var(--text-gray);
+    font-weight:600;
+    white-space:nowrap;
+}
+
+/* Project Grid */
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.5rem;
+}
+.project-grid.featured{
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:auto auto;
+}
+.project-grid.featured .project-card:first-child{
+    grid-column:span 2;
+    grid-row:span 1;
+}
+
+/* Project Card */
+.project-card{
+    position:relative;
+    border-radius:.75rem;
+    overflow:hidden;
+    box-shadow:var(--shadow-md);
+    background:var(--dark-bg);
+    cursor:pointer;
+    transition:transform .35s ease,box-shadow .35s ease;
+}
+.project-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.18);}
+
+.project-card .card-bg{
+    width:100%;
+    aspect-ratio:16/10;
+    background-size:cover;
+    background-position:center;
+    transition:transform .5s ease;
+}
+.project-grid.featured .project-card:first-child .card-bg{aspect-ratio:16/8;}
+.project-card:hover .card-bg{transform:scale(1.06);}
+
+/* Colored placeholder bg for demo */
+.bg-residential{background-color:#1a3a4a;}
+.bg-commercial{background-color:#1a2a3a;}
+.bg-development{background-color:#2a1a0a;}
+
+.card-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,rgba(0,0,0,.88) 0%,rgba(0,0,0,.2) 55%,transparent 100%);
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:1.5rem;
+    opacity:1;
+    transition:opacity .3s;
+}
+.card-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:.35rem;
+    background:var(--primary-orange);
+    color:#fff;
+    font-size:.7rem;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    padding:.3rem .7rem;
+    border-radius:999px;
+    margin-bottom:.75rem;
+    width:fit-content;
+}
+.card-overlay h3{
+    color:#fff;
+    font-size:1.15rem;
+    font-weight:700;
+    line-height:1.3;
+    margin-bottom:.35rem;
+}
+.project-grid.featured .project-card:first-child .card-overlay h3{font-size:1.5rem;}
+.card-overlay p{
+    color:rgba(255,255,255,.7);
+    font-size:.8rem;
+    line-height:1.4;
+    max-width:400px;
+    transform:translateY(6px);
+    opacity:0;
+    transition:transform .3s ease,opacity .3s ease;
+}
+.project-card:hover .card-overlay p{transform:translateY(0);opacity:1;}
+
+/* Icon shown on cards */
+.card-icon-wrap{
+    position:absolute;
+    top:1rem;
+    right:1rem;
+    width:2.25rem;
+    height:2.25rem;
+    background:rgba(249,115,22,.9);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:.95rem;
+    transform:scale(0);
+    transition:transform .3s ease;
+}
+.project-card:hover .card-icon-wrap{transform:scale(1);}
+
+/* =========================================
+   Category List Panel
+   ========================================= */
+.categories-overview{
+    background:var(--dark-bg);
+    padding:5rem 0;
+}
+.categories-overview-inner{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:2rem;
+}
+.cat-panel{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-top:3px solid var(--primary-orange);
+    border-radius:.5rem;
+    padding:2rem 1.75rem;
+    transition:background .3s,transform .3s;
+}
+.cat-panel:hover{background:rgba(255,255,255,.07);transform:translateY(-4px);}
+.cat-panel-icon{
+    width:3rem;
+    height:3rem;
+    background:rgba(249,115,22,.12);
+    border-radius:.5rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--primary-orange);
+    font-size:1.3rem;
+    margin-bottom:1.25rem;
+    transition:background .3s,transform .3s;
+}
+.cat-panel:hover .cat-panel-icon{background:var(--primary-orange);color:#fff;transform:scale(1.1) rotate(-5deg);}
+.cat-panel h3{
+    font-family:'Montserrat',sans-serif;
+    font-size:1.2rem;
+    font-weight:800;
+    color:#fff;
+    margin-bottom:1.25rem;
+}
+.cat-panel ul{display:flex;flex-direction:column;gap:.6rem;}
+.cat-panel ul li{
+    display:flex;
+    align-items:center;
+    gap:.6rem;
+    color:rgba(255,255,255,.65);
+    font-size:.875rem;
+}
+.cat-panel ul li::before{
+    content:'';
+    width:6px;height:6px;
+    background:var(--primary-orange);
+    border-radius:50%;
+    flex-shrink:0;
+}
+
+/* =========================================
+   CTA Section
+   ========================================= */
+.cta-section{
+    background-color:var(--primary-orange);
+    color:#fff;
+    padding:5rem 0;
+    position:relative;
+    overflow:hidden;
+    text-align:center;
+}
+.cta-section::before{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(120deg,transparent 40%,rgba(255,255,255,.06) 50%,transparent 60%);
+    background-size:200% 100%;
+    animation:shimmer 3s linear infinite;
+}
+@keyframes shimmer{0%{background-position:200% 0;}100%{background-position:-200% 0;}}
+.cta-section h2{font-size:clamp(1.75rem,4vw,2.5rem);font-weight:900;margin-bottom:1rem;position:relative;}
+.cta-section p{font-size:1.1rem;opacity:.9;margin-bottom:2rem;max-width:620px;margin-left:auto;margin-right:auto;position:relative;}
+.cta-buttons{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;position:relative;}
+
+/* =========================================
+   Footer
+   ========================================= */
+.footer{background-color:var(--dark-bg);color:var(--text-light);padding:4rem 0 2rem;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;}
+.footer-logo{width:280px;height:60px;overflow:hidden;}
+.footer-logo img{width:100%;height:100%;object-fit:contain;object-position:left center;}
+.footer-desc{color:#9CA3AF;margin-top:1.5rem;font-size:.875rem;max-width:300px;line-height:1.7;text-align:justify;}
+.footer-col h4{color:var(--primary-orange);font-size:1.125rem;font-weight:700;margin-bottom:1.5rem;}
+.footer-col ul{display:flex;flex-direction:column;gap:.75rem;}
+.footer-col ul a,.footer-col ul li{color:#9CA3AF;font-size:.875rem;transition:color .2s,padding-left .2s;}
+.footer-col ul a:hover{color:var(--white);padding-left:4px;}
+.contact-list li{display:flex;align-items:center;gap:.75rem;}
+.contact-list i{color:var(--primary-orange);width:1rem;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:2rem;display:flex;justify-content:space-between;color:#6B7280;font-size:.875rem;}
+
+/* =========================================
+   Responsive
+   ========================================= */
+@media(max-width:1024px){
+    .project-grid,.project-grid.featured{grid-template-columns:repeat(2,1fr);}
+    .project-grid.featured .project-card:first-child{grid-column:span 2;}
+    .categories-overview-inner{grid-template-columns:1fr 1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+    .nav-links,.nav-cta{display:none;}
+    .mobile-menu-btn{display:block;}
+    .project-grid,.project-grid.featured{grid-template-columns:1fr;}
+    .project-grid.featured .project-card:first-child{grid-column:span 1;}
+    .categories-overview-inner{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr;gap:2rem;}
+    .footer-bottom{flex-direction:column;gap:1rem;text-align:center;}
+    .category-header{flex-direction:column;align-items:flex-start;}
+    .hero-stats{gap:1.5rem;}
+    .hero-stat .num{font-size:1.5rem;}
+}
+@media(max-width:480px){
+    .filter-btn{font-size:.8rem;padding:.4rem .9rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- Top Trust Bar -->
+<div class="top-bar">
+    <div class="container top-bar-content">
+        <div class="top-contact">
+            <a href="tel:3134449734"><i class="fas fa-phone-alt"></i> (313) 444-9734</a>
+            <a href="mailto:bula@buladev.com"><i class="fas fa-envelope"></i> bula@buladev.com</a>
+        </div>
+        <div class="trust-marquee">
+            <div class="trust-track">
+                <span><i class="fas fa-star"></i> 20 YEARS EXPERIENCE</span>
+                <span><i class="fas fa-shield-alt"></i> LICENSED & INSURED</span>
+                <span><i class="fas fa-chart-line"></i> LEAN SIX SIGMA CERTIFIED</span>
+                <span><i class="fas fa-tasks"></i> PROFESSIONAL PROJECT MANAGEMENT</span>
+                <span><i class="fas fa-star"></i> 20 YEARS EXPERIENCE</span>
+                <span><i class="fas fa-shield-alt"></i> LICENSED & INSURED</span>
+                <span><i class="fas fa-chart-line"></i> LEAN SIX SIGMA CERTIFIED</span>
+                <span><i class="fas fa-tasks"></i> PROFESSIONAL PROJECT MANAGEMENT</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+    <div class="container nav-container">
+        <div class="logo-group">
+            <a href="index.html"><img src="img/header logo.png" alt="BULADEV Logo"></a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <div class="dropdown">
+                <a href="services.html" class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                    <a href="residential-construction.html"><i class="fas fa-home"></i> Residential Construction</a>
+                    <a href="commercial.html"><i class="fas fa-building"></i> Commercial Construction</a>
+                    <a href="land-development.html"><i class="fas fa-map-marked-alt"></i> Land Development</a>
+                    <a href="project-management.html"><i class="fas fa-tasks"></i> Project Management</a>
+                </div>
+            </div>
+            <a href="portfolio.html" class="active">Projects</a>
+            <a href="process.html">Our Process</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <a href="contact.html" class="btn btn-primary nav-cta">Start Your Project</a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+    </div>
+</header>
+
+<div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+<div class="mobile-menu" id="mobile-menu">
+    <button class="close-menu-btn" id="close-menu-btn" aria-label="Close menu"><i class="fas fa-times"></i></button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <div class="mobile-submenu">
+        <a href="residential-construction.html"><i class="fas fa-home"></i> Residential Construction</a>
+                    <a href="commercial.html"><i class="fas fa-building"></i> Commercial Construction</a>
+                    <a href="land-development.html"><i class="fas fa-map-marked-alt"></i> Land Development</a>
+                    <a href="project-management.html"><i class="fas fa-tasks"></i> Project Management</a>
+    </div>
+    <a href="portfolio.html" class="active">Projects</a>
+    <a href="process.html">Our Process</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+</div>
+
+<main>
+
+<!-- ========== HERO ========== -->
+<section class="portfolio-hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+        <div class="hero-eyebrow"><i class="fas fa-layer-group"></i> Our Portfolio</div>
+        <h1>Residential and Commercial Work<br><span>Built With Purpose</span></h1>
+        <hr class="orange-line">
+        <p>Explore project types supported by BULADEV Building &amp; Land Development and ASA Construction LLC.</p>
+        <div class="hero-stats">
+            <div class="hero-stat"><div class="num">20+</div><div class="lbl">Years Experience</div></div>
+            <div class="hero-stat"><div class="num">3</div><div class="lbl">Core Disciplines</div></div>
+            <div class="hero-stat"><div class="num">100%</div><div class="lbl">Licensed &amp; Insured</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== INTRO STRIP ========== -->
+<div class="intro-strip">
+    <div class="container">
+        <p>Our projects reflect our commitment to planning, quality workmanship, communication, and successful property improvement. From residential construction to commercial renovations and development-focused projects, we help clients create spaces that are built for use, value, and long-term success.</p>
+    </div>
+</div>
+
+<!-- ========== FILTER BAR ========== -->
+<div class="filter-bar">
+    <div class="container">
+        <div class="filter-label">Browse by category</div>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="residential">Residential</button>
+            <button class="filter-btn" data-filter="commercial">Commercial</button>
+            <button class="filter-btn" data-filter="development">Development</button>
+        </div>
+    </div>
+</div>
+
+<!-- ========== RESIDENTIAL ========== -->
+<section class="category-section" id="residential" data-category="residential">
+    <div class="container">
+        <div class="category-header reveal">
+            <div class="category-header-left">
+                <div class="cat-tag"><i class="fas fa-home"></i> Residential</div>
+                <div class="cat-title">Residential Projects</div>
+            </div>
+            <span class="cat-count">New Homes · Additions · Renovations · Investment Upgrades</span>
+        </div>
+        <div class="project-grid featured">
+            <div class="project-card reveal" style="transition-delay:0ms">
+                <div class="card-bg bg-residential" style="background-image:url('img/residencial-hero.png')"></div>
+                <div class="card-icon-wrap"><i class="fas fa-expand-arrows-alt"></i></div>
+                <div class="card-overlay">
+                    <div class="card-badge"><i class="fas fa-tools"></i> Renovation</div>
+                    <h3>Interior Remodel</h3>
+                    <p>Kitchen, bathroom, and full-interior renovations that improve function and modernize the space.</p>
+                </div>
+            </div>
+            <div class="project-card reveal" style="transition-delay:160ms">
+                <div class="card-bg bg-residential" style="background-image:url('img/residential-construction.png')"></div>
+                <div class="card-icon-wrap"><i class="fas fa-expand-arrows-alt"></i></div>
+                <div class="card-overlay">
+                    <div class="card-badge"><i class="fas fa-star"></i> Addition</div>
+                    <h3>Home Addition</h3>
+                    <p>Expanding square footage with additions that blend seamlessly with the existing structure.</p>
+                </div>
+            </div>
+            <div class="project-card reveal" style="transition-delay:240ms">
+                <div class="card-bg bg-residential" style="background-image:url('img/about-home.png')"></div>
+                <div class="card-icon-wrap"><i class="fas fa-expand-arrows-alt"></i></div>
+                <div class="card-overlay">
+                    <div class="card-badge"><i class="fas fa-dollar-sign"></i> Investment</div>
+                    <h3>Investment Property Upgrade</h3>
+                    <p>Strategic improvements to residential investment properties for better returns and curb appeal.</p>
+                </div>
+            </div>
+             <div class="project-card reveal" style="transition-delay:240ms">
+                <div class="card-bg bg-residential" style="background-image:url('img/about-home.png')"></div>
+                <div class="card-icon-wrap"><i class="fas fa-expand-arrows-alt"></i></div>
+                <div class="card-overlay">
+                    <div class="card-badge"><i class="fas fa-dollar-sign"></i> Investment</div>
+                    <h3>Investment Property Upgrade</h3>
+                    <p>Strategic improvements to residential investment properties for better returns and curb appeal.</p>
+                </div>
+            </div>
+
+
+            <div class="project-card reveal" style="transition-delay:320ms">
+                <div class="card-bg bg-residential" style="background-image:url('img/service-hero.png')"></div>
+                <div class="card-icon-wrap"><i class="fas fa-expand-arrows-alt"></i></div>
+                <div class="card-overlay">
+                    <div class="card-badge"><i class="fas fa-building"></i> Multi-Family</div>
+                    <h3>Multi-Family Improvement</h3>
+                    <p>Coordinated upgrades across multi-family residential properties to improve value and liveability.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== COMMERCIAL ========== -->
+<section class="category-section" id="commercial" data-category="commercial" style="background:var(--light-bg);padding-top:4rem;">
+    <div class="container">
+        <div class="category-header reveal">
+            <div class="category-header-left">
+                <div class="cat-tag"><i class="fas fa-building"></i> Commercial</div>
+                <div class="cat-title">Commercial Projects</div>
+            </div>
+            <span class="cat-count">Office · Retail · Tenant Build-Outs · Facility Improvements</span>
+        </div>
+        <div class="project-grid">
+            <div class="project-card reveal" style="transition-delay:0ms">
+                <div class="card-bg bg-commercial" style="background-image:url('img/commercial-hero.png')"></div>
+                <div class="card-icon-wrap"><i class="fas fa-expand-arrows-alt"></i></div>
+                <div class="card-overlay">
+                    <div class="card-badge"><i class="fas fa-store"></i> Retail</div>
+                    <h3>Retail Space Improvement</h3>
+                    <p>Retail renovations that elevate the customer experience and improve commercial property value.</p>
+                </div>
+            </div>
+            <div class="project-card reveal" style="transition-delay:160ms">
+                <div class="card-bg bg-commercial" style="background-image:url('img/residencial-hero.png')"></div>
+                <div class="card-icon-wrap"><i class="fas fa-expand-arrows-alt"></i></div>
+                <div class="card-overlay">
+                    <div class="card-badge"><i class="fas fa-wrench"></i> Renovation</div>
+                    <h3>Commercial Renovation</h3>
+                    <p>Full-scope commercial renovations that modernize, reposition, or repurpose existing spaces.</p>
+                </div>
+            </div>
+            <div class="project-card reveal" style="transition-delay:320ms">
+                <div class="card-bg bg-commercial" style="background-image:url('img/project.png')"></div>
+                <div class="card-icon-wrap"><i class="fas fa-expand-arrows-alt"></i></div>
+                <div class="card-overlay">
+                    <div class="card-badge"><i class="fas fa-external-link-alt"></i> Exterior</div>
+                    <h3>Exterior Property Improvement</h3>
+                    <p>Facade, parking, and site improvements that enhance the function and appearance of commercial properties.</p>
+                </div>
+            </div>
+
+
+            <div class="project-card reveal" style="transition-delay:160ms">
+                <div class="card-bg bg-commercial" style="background-image:url('img/land-hero.png')"></div>
+                <div class="card-icon-wrap"><i class="fas fa-expand-arrows-alt"></i></div>
+                <div class="card-overlay">
+                    <div class="card-badge"><i class="fas fa-wrench"></i> Renovation</div>
+                    <h3>Commercial Renovation</h3>
+                    <p>Full-scope commercial renovations that modernize, reposition, or repurpose existing spaces.</p>
+                </div>
+            </div>
+
+
+            <div class="project-card reveal" style="transition-delay:160ms">
+                <div class="card-bg bg-commercial" style="background-image:url('img/residencial-hero.png')"></div>
+                <div class="card-icon-wrap"><i class="fas fa-expand-arrows-alt"></i></div>
+                <div class="card-overlay">
+                    <div class="card-badge"><i class="fas fa-wrench"></i> Renovation</div>
+                    <h3>Commercial Renovation</h3>
+                    <p>Full-scope commercial renovations that modernize, reposition, or repurpose existing spaces.</p>
+                </div>
+            </div>
+            
+            <div class="project-card reveal" style="transition-delay:400ms">
+                <div class="card-bg bg-commercial" style="background-image:url('img/commercial.png')"></div>
+                <div class="card-icon-wrap"><i class="fas fa-expand-arrows-alt"></i></div>
+                <div class="card-overlay">
+                    <div class="card-badge"><i class="fas fa-cog"></i> Facility</div>
+                    <h3>Facility Upgrade</h3>
+                    <p>Systematic facility upgrades that improve safety, efficiency, and occupant satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== DEVELOPMENT ========== -->
+<section class="category-section" id="development" data-category="development">
+    <div class="container">
+        <div class="category-header reveal">
+            <div class="category-header-left">
+                <div class="cat-tag"><i class="fas fa-map-marked-alt"></i> Development</div>
+                <div class="cat-title">Development Projects</div>
+            </div>
+            <span class="cat-count">Site Preparation · Land Improvements · Construction-Ready Coordination</span>
+        </div>
+        <div class="project-grid">
+            <div class="project-card reveal" style="transition-delay:0ms">
+                <div class="card-bg bg-development" style="background-image:url('img/land-hero.png')"></div>
+                <div class="card-icon-wrap"><i class="fas fa-expand-arrows-alt"></i></div>
+                <div class="card-overlay">
+                    <div class="card-badge"><i class="fas fa-tractor"></i> Site Prep</div>
+                    <h3>Site Preparation</h3>
+                    <p>Coordinating land clearing, grading, and site work to create a construction-ready property.</p>
+                </div>
+            </div>
+            <div class="project-card reveal" style="transition-delay:80ms">
+                <div class="card-bg bg-development" style="background-image:url('img/service-hero.png')"></div>
+                <div class="card-icon-wrap"><i class="fas fa-expand-arrows-alt"></i></div>
+                <div class="card-overlay">
+                    <div class="card-badge"><i class="fas fa-seedling"></i> Land</div>
+                    <h3>Land Improvement</h3>
+                    <p>Targeted improvements to raw land that increase usability, accessibility, and development potential.</p>
+                </div>
+            </div>
+            <div class="project-card reveal" style="transition-delay:160ms">
+                <div class="card-bg bg-development" style="background-image:url('img/residencial-hero.png')"></div>
+                <div class="card-icon-wrap"><i class="fas fa-expand-arrows-alt"></i></div>
+                <div class="card-overlay">
+                    <div class="card-badge"><i class="fas fa-drafting-compass"></i> Planning</div>
+                    <h3>Property Development Support</h3>
+                    <p>Pre-construction planning, feasibility coordination, and development strategy for property owners and investors.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CATEGORIES OVERVIEW ========== -->
+<section class="categories-overview">
+    <div class="container">
+        <div style="text-align:center;margin-bottom:3rem;" class="reveal">
+            <span class="section-tag" style="color:var(--primary-orange);">Project Types We Support</span>
+            <h2 style="font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:800;color:#fff;margin-top:.75rem;">What We Build For Our Clients</h2>
+        </div>
+        <div class="categories-overview-inner">
+            <div class="cat-panel reveal reveal-left">
+                <div class="cat-panel-icon"><i class="fas fa-home"></i></div>
+                <h3>Residential Projects</h3>
+                <ul>
+                    <li>New homes</li>
+                    <li>Additions</li>
+                    <li>Renovations</li>
+                    <li>Kitchens &amp; Bathrooms</li>
+                    <li>Basements</li>
+                    <li>Exterior improvements</li>
+                    <li>Investment property upgrades</li>
+                    <li>Multi-family improvements</li>
+                </ul>
+            </div>
+            <div class="cat-panel reveal" style="transition-delay:100ms">
+                <div class="cat-panel-icon"><i class="fas fa-building"></i></div>
+                <h3>Commercial Projects</h3>
+                <ul>
+                    <li>Office spaces</li>
+                    <li>Retail spaces</li>
+                    <li>Tenant build-outs</li>
+                    <li>Commercial renovations</li>
+                    <li>Property upgrades</li>
+                    <li>Facility improvements</li>
+                    <li>Exterior improvements</li>
+                </ul>
+            </div>
+            <div class="cat-panel reveal reveal-right" style="transition-delay:200ms">
+                <div class="cat-panel-icon"><i class="fas fa-map-marked-alt"></i></div>
+                <h3>Development Projects</h3>
+                <ul>
+                    <li>Site preparation</li>
+                    <li>Land improvements</li>
+                    <li>Property development support</li>
+                    <li>Construction-ready coordination</li>
+                    <li>Access &amp; exterior site improvements</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CTA ========== -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Have a project in mind?</h2>
+        <p>Let us help you plan the next step. Whether it's residential, commercial, or land development — BULADEV and ASA Construction LLC are ready to move forward with you.</p>
+        <div class="cta-buttons">
+            <a href="tel:3134449734" class="btn btn-white"><i class="fas fa-phone-alt"></i> (313) 444-9734</a>
+            <a href="contact.html" class="btn btn-outline-white">Start a Project</a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                   <div class="logo-group">
+                <img href="#home" src="img/footer logo.png" alt="BULADEV Logo">
+            </div>
+                    <p class="footer-desc">BULADEV Building & Land Development, together with ASA Construction LLC, provides licensed and insured residential construction, commercial construction, renovation, build-out, project management, and land development support. Backed by 20 years of experience, certified Lean Six Sigma practices, and professional project managers, we help homeowners, investors, businesses, and property owners plan and complete successful construction projects.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                       <li><a href="#home">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li class="dropdown">
+        <a href="services.html">Services</a>
+
+        <ul class="submenu">
+            <li><a href="residential-construction.html"><i class="fas fa-home"></i> Residential Construction</a></li>
+            <li><a href="commercial.html"><i class="fas fa-building"></i> Commercial Construction</a></li>
+            <li><a href="land-development.html"><i class="fas fa-map-marked-alt"></i> Land Development</a></li>
+            <li><a href="project-management.html"><i class="fas fa-tasks"></i> Project Management</a></li>
+        </ul>
+        
+    </li>
+                        <li><a href="portfolio.html">Projects</a></li>
+                         <li><a href="#faq">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="residential-construction.html">Residential Construction</a></li>
+                        <li><a href="commercial.html">Commercial Construction</a></li>
+                        <li><a href="land-development.html">Renovations</a></li>
+                        <li><a href="project-management.html">Tenant Build-Outs</a></li>
+                        <li><a href="residential-construction.html">Property Improvements</a></li>
+                        <li><a href="land-development.html">Land Development</a></li>
+                        <li><a href="contact.html">Site Preparation Support</a></li>
+                        <li><a href="project-management.html">Project Management</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="contact-list">
+
+                    <a href="tel:3134449734"><i class="fas fa-phone-alt"></i> (313) 444-9734</a>
+                    <a href="mailto:bula@buladev.com"><i class="fas fa-envelope"></i> bula@buladev.com</a>
+                    <a href="www.BULADEV.com"><li><i class="fas fa-globe"></i> www.BULADEV.com</li></a>
+                    <li><i class="fa-solid fa-location-dot"></i> Contact Us for Service Availability in Your Area</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> BULADEV Building & Land Development and ASA Construction LLC. All rights reserved.</p>
+                <p>Licensed & Insured | 20 Years Experience</p>
+            </div>
+        </div>
+    </footer>
+
+<script>
+// Mobile menu
+(function(){
+    const btn=document.getElementById('mobile-menu-btn');
+    const menu=document.getElementById('mobile-menu');
+    const overlay=document.getElementById('mobile-menu-overlay');
+    const close=document.getElementById('close-menu-btn');
+    function openMenu(){menu.classList.add('active');overlay.classList.add('active');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+    function closeMenu(){menu.classList.remove('active');overlay.classList.remove('active');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+    if(btn)btn.addEventListener('click',openMenu);
+    if(close)close.addEventListener('click',closeMenu);
+    if(overlay)overlay.addEventListener('click',closeMenu);
+    document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',closeMenu));
+})();
+
+// Navbar shadow
+(function(){
+    const nb=document.getElementById('navbar');
+    if(!nb)return;
+    window.addEventListener('scroll',()=>{nb.style.boxShadow=window.scrollY>10?'0 4px 20px rgba(0,0,0,.1)':'0 1px 2px rgba(0,0,0,.05)';},{passive:true});
+})();
+
+// Scroll reveal
+(function(){
+    const io=new IntersectionObserver(entries=>{
+        entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});
+    },{threshold:0.1});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+})();
+
+// Filter
+(function(){
+    const btns=document.querySelectorAll('.filter-btn');
+    const sections=document.querySelectorAll('.category-section[data-category]');
+    btns.forEach(btn=>{
+        btn.addEventListener('click',()=>{
+            btns.forEach(b=>b.classList.remove('active'));
+            btn.classList.add('active');
+            const f=btn.dataset.filter;
+            sections.forEach(s=>{
+                if(f==='all'||s.dataset.category===f){
+                    s.style.display='';
+                }else{
+                    s.style.display='none';
+                }
+            });
+        });
+    });
+})();
+
+// Footer year
+document.getElementById('current-year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
